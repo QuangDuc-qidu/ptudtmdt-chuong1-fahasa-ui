@@ -41,6 +41,15 @@ Các điều chỉnh này do AI phát hiện và thực hiện, không dùng đ�
 
 ## 4. Giới hạn kiểm tra
 
-Đã kiểm tra trong một trình duyệt với các kích thước mô phỏng, chưa kiểm tra trên điện thoại vật lý, nhiều trình duyệt hoặc với người dùng thật. Chưa chạy trên GitHub Pages. Không có backend, tìm kiếm, giỏ hàng hoặc thanh toán riêng để kiểm thử nghiệp vụ.
+Đã kiểm tra trong một trình duyệt với các kích thước mô phỏng, chưa kiểm tra trên điện thoại vật lý, nhiều trình duyệt hoặc với người dùng thật. Không có backend, tìm kiếm, giỏ hàng hoặc thanh toán riêng để kiểm thử nghiệp vụ.
+
+## 5. Kiểm tra bản xuất bản trên GitHub
+
+- Repository [Public](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui) đã có đủ 32 file; đối chiếu nội dung từng file với bản tại máy cho kết quả khớp.
+- Lần triển khai [GitHub Pages đầu tiên](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui/actions/runs/39206198189) có trạng thái Success.
+- Mở [trang trực tiếp](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/): có 4 thẻ sách, CSS và cả 4 SVG tải thành công.
+- Khung nhìn 1366 px: 4 cột; chiều rộng nội dung và chiều rộng cuộn đều 1351 px, không tràn ngang.
+- Khung nhìn 390 px: 1 cột; chiều rộng nội dung và chiều rộng cuộn đều 375 px, không tràn ngang; bấm mở thông tin phiên bản thành công.
+- Việc xuất bản và kiểm tra này do Codex AI thực hiện ngày 19/10/2026. Sinh viên tự thực hiện thao tác nộp LMS.
 
 Sinh viên cần tự chạy và ghi kết quả tại [phiếu tự kiểm tra](TU_KIEM_TRA_CA_NHAN.md).
