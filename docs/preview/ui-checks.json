@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-19",
+  "checkedBy": "Codex AI",
+  "keyboardToggle": {
+    "before": true,
+    "after": false
+  },
+  "viewports": [
+    {
+      "requestedWidth": 1366,
+      "cards": 4,
+      "columns": "280px 280px 280px 280px",
+      "imagesLoaded": true,
+      "scrollWidth": 1351,
+      "summaryMinHeight": 44,
+      "titleClipped": false,
+      "viewport": 1351
+    },
+    {
+      "requestedWidth": 768,
+      "cards": 4,
+      "columns": "332.333px 332.333px",
+      "imagesLoaded": true,
+      "scrollWidth": 753,
+      "summaryMinHeight": 44,
+      "titleClipped": false,
+      "viewport": 753
+    },
+    {
+      "requestedWidth": 390,
+      "cards": 4,
+      "columns": "338.667px",
+      "imagesLoaded": true,
+      "scrollWidth": 375,
+      "summaryMinHeight": 46,
+      "titleClipped": false,
+      "viewport": 375
+    },
+    {
+      "requestedWidth": 320,
+      "cards": 4,
+      "columns": "268.667px",
+      "imagesLoaded": true,
+      "scrollWidth": 305,
+      "summaryMinHeight": 46,
+      "titleClipped": false,
+      "viewport": 305
+    }
+  ]
+}
