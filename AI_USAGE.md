@@ -32,6 +32,7 @@ Trong quá trình trao đổi, người dùng đã được giải thích rằng
 6. Viết CSS riêng, bố cục 4/2/1 cột; bổ sung focus và giảm chuyển động.
 7. Tạo bốn hình SVG mới; không lấy bìa sách phát hành làm tài nguyên giao diện.
 8. Chuẩn bị bảng khảo sát, nguồn dữ liệu, tài liệu đọc code và hướng dẫn GitHub.
+9. Theo yêu cầu người dùng, tạo repository Public trên tài khoản của sinh viên, tải các file bài làm và xuất bản GitHub Pages; không nộp bài trên LMS.
 
 ## 4. Kiểm tra và điều chỉnh của AI
 

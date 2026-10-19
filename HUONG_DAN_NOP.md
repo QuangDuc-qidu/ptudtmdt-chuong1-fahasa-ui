@@ -1,48 +1,51 @@
-# Hướng dẫn kiểm tra và đưa bài lên GitHub
+# Hướng dẫn mở bài, tự kiểm tra và nộp
 
-## 1. Trước khi đưa lên GitHub
+## 1. Các đường dẫn đã chuẩn bị
 
-1. Mở `index.html` bằng Chrome và đọc bài tại `README.md`.
-2. Kiểm tra lại bảng khảo sát, thay nhận xét nào không còn đúng với website thực tế.
-3. Tự chỉnh ít nhất một điểm do bạn phát hiện, ghi rõ trong `docs/TU_KIEM_TRA_CA_NHAN.md`.
-4. Đọc `AI_USAGE.md`, giữ thông tin khai báo đúng với mức hỗ trợ thực tế.
+- Mã nguồn riêng, Public: [GitHub bài cá nhân](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
+- Trang chạy trực tiếp: [Góc Đọc](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/).
+- Bản tại máy gồm `index.html`, thư mục `css/`, `images/` và các tài liệu. Có thể mở thẳng `index.html` bằng Chrome, không cần cài thư viện.
 
-## 2. Repository cá nhân
+Codex AI đã tải file và bật GitHub Pages trên nhánh `main`, thư mục `/ (root)`. Không cần tạo repository khác hoặc xuất bản lại từ đầu. Người học tự nộp bài trên LMS.
 
-Đề bài yêu cầu repository **riêng, Public**. Nếu chưa được tạo, có thể dùng tên `ptudtmdt-chuong1-fahasa-ui`.
+## 2. Việc sinh viên thực hiện trước khi nộp
 
-Mở GitHub bằng tài khoản của bạn, chọn **New repository**, chọn Public, nhập tên và mô tả. Nếu đã có toàn bộ các file ở máy, không tạo thêm README, license hoặc `.gitignore` trên GitHub để tránh hai lịch sử độc lập.
+1. Đọc `README.md`, `KHAO_SAT.md` và `docs/GIAI_THICH_CODE.md` để hiểu vấn đề được chọn và cách code giải quyết.
+2. Tự mở trang; thử mở thông tin phiên bản, kiểm tra bốn sản phẩm và các liên kết. Dùng F12 → Ctrl + Shift + M để kiểm tra màn hình nhỏ.
+3. Đối chiếu nhận xét khảo sát với FAHASA, thêm nhận xét của bản thân. Không nhận các thao tác do AI thực hiện là trải nghiệm tự làm.
+4. Tự phát hiện và chỉnh ít nhất một điểm, ghi lý do, file đã sửa và kết quả tại `docs/TU_KIEM_TRA_CA_NHAN.md`. Phiếu hiện chưa được điền thay sinh viên.
+5. Giữ `AI_USAGE.md` đúng với mức hỗ trợ thực tế; cập nhật nếu sử dụng thêm AI.
 
-Trong VS Code mở đúng thư mục chứa `index.html`. Dùng Terminal để đưa bài lên GitHub. Nếu thư mục đã được khởi tạo Git bởi AI, bỏ qua `git init` và kiểm tra `git status` trước.
+## 3. Mở repository trong VS Code để học và chỉnh sửa
+
+Nếu muốn có bản sao kèm lịch sử Git, mở Terminal ở thư mục cha bạn muốn lưu và chạy:
 
 ```powershell
-git init
-git add .
-git commit -m "Add book card UI improvement and survey"
-git branch -M main
+git clone https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui.git
 ```
 
-Sau đó dùng URL **thật** hiển thị trong repository của bạn để chạy `git remote add origin URL_THAT` và `git push -u origin main`. Không dán nguyên chữ `URL_THAT`; thay bằng đường dẫn vừa tạo.
+Trong VS Code chọn File → Open Folder → chọn thư mục vừa clone. Thư mục này đã liên kết remote GitHub; không cần chạy lại `git init` hoặc `git remote add`.
 
-Nếu Git hỏi danh tính commit, khai báo tên/email của bạn trong repository này bằng `git config user.name` và `git config user.email`. Tên/email commit khác với bước đăng nhập GitHub. Khi được yêu cầu xác thực, dùng luồng đăng nhập GitHub trên trình duyệt; không gửi mật khẩu hoặc mã xác thực vào chat.
+Sau khi tự sửa file và kiểm tra trang, chạy trong thư mục vừa clone:
 
-## 3. Cách dùng giao diện VS Code
+```powershell
+git status
+git diff
+git add .
+git commit -m "Update after personal review"
+git push
+```
 
-Cũng có thể mở **Source Control**, tạo commit rồi chọn **Publish to GitHub**, đăng nhập tài khoản và chọn **Public repository**. Kiểm tra kỹ thư mục bài làm để không đăng các file riêng tư ngoài bài.
+Chỉ thêm file thuộc bài làm. Nếu Git hỏi danh tính commit, cấu hình tên/email của bạn cho repository. Nếu cần xác thực, làm theo luồng đăng nhập GitHub trên trình duyệt. VS Code và GitHub là hai bước riêng: mở được file không đồng nghĩa đã đăng nhập để push.
 
-## 4. GitHub Pages nếu muốn có link chạy trực tiếp
+Sau khi push, chờ GitHub Actions hoàn thành rồi mở lại trang Pages. Nếu file đã được sửa trên GitHub, dùng `git pull` trước khi sửa tiếp tại máy để lấy phiên bản mới nhất.
 
-Trong repository, vào **Settings → Pages**, chọn nguồn từ nhánh `main`, thư mục `/ (root)`, rồi lưu. Khi GitHub hiển thị URL, mở URL đó và kiểm tra ảnh/CSS.
+## 4. Tự nộp trên LMS
 
-GitHub Pages là bước bổ sung theo tài liệu bài tập. Repository Public để xem source là yêu cầu bắt buộc. Không cần triển khai lên một dịch vụ hosting trả phí.
-
-## 5. Kiểm tra cuối và nộp LMS
-
-- Repository Public, mở được source và README.
-- File `index.html`, `css/style.css` và bốn ảnh SVG có đủ.
-- Bảng khảo sát đủ năm phần; có giải thích vấn đề và cải tiến.
-- Có nhật ký AI và phần tự kiểm tra thực tế của sinh viên.
-- Nếu dùng Pages, link chạy đúng và không mất ảnh/CSS.
+- Kiểm tra repository Public mở được source, bảng khảo sát và README.
+- Kiểm tra nhật ký AI và phần tự kiểm tra của mình đã cập nhật trung thực.
+- Nếu nộp ZIP sau khi tự chỉnh sửa, tạo lại ZIP từ bản mới; không dùng ZIP cũ để nộp một phiên bản khác với GitHub.
 - PDF đề bài chưa nêu rõ ô nộp LMS cần link, ZIP hay tài liệu khác. Xem hướng dẫn tại **bài tập cá nhân** trên LMS và nộp đúng định dạng/hạn hiển thị ở đó; không lấy hạn bài nhóm áp sang bài cá nhân.
+- GitHub Pages là phần bổ sung để xem nhanh. Repository Public chứa mã nguồn là yêu cầu riêng của đề bài.
 
 Tài liệu thao tác chính thức: [GitHub trong VS Code](https://code.visualstudio.com/docs/sourcecontrol/github), [GitHub Pages](https://docs.github.com/en/pages).

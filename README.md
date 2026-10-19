@@ -2,6 +2,8 @@
 
 Bài cá nhân Chương 1 môn Phát triển ứng dụng TMĐT. Website khảo sát là [FAHASA](https://www.fahasa.com/). Sản phẩm thực hành là **Góc Đọc**, một trang độc lập để minh họa cách trình bày tên sách, tác giả, phiên bản và giá rõ ràng hơn.
 
+**Xem trực tiếp:** [Góc Đọc trên GitHub Pages](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/). **Mã nguồn Public:** [repository bài cá nhân](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
+
 ## 1. Vấn đề và phạm vi cải tiến
 
 Trong phiên khảo sát ngày **19/10/2026**, tại danh mục Văn học, tên một số sách dài chỉ hiển thị khoảng hai dòng. Ví dụ tên đầy đủ của **Bí Mật Tối Thượng** còn có thông tin bìa cứng và chữ ký in ở phía sau, nhưng phần này bị khuất trên thẻ danh sách. Đây là một đánh đổi về bố cục, không phải kết luận toàn bộ website khó sử dụng.
