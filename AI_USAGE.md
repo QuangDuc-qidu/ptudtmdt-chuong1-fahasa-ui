@@ -1,62 +1,55 @@
 # Nhật ký sử dụng AI
 
-## 1. Công cụ và phạm vi
+## 1. Công cụ AI
 
-Công cụ: Codex trong ứng dụng ChatGPT, hỗ trợ khảo sát web, phân tích giao diện, viết HTML/CSS, tạo bìa SVG và kiểm tra bản mẫu.
+Codex — công cụ AI của OpenAI hỗ trợ lập trình và phân tích giao diện.
 
-**AI đã chuẩn bị phần lớn bản code và tài liệu hiện tại.** Đây không phải bằng chứng sinh viên đã tự viết toàn bộ hoặc đã tự chạy các bước kiểm tra. Phần sinh viên tự đối chiếu và chỉnh sửa được ghi riêng tại `docs/TU_KIEM_TRA_CA_NHAN.md` sau khi thực hiện.
+## 2. Mục đích sử dụng
 
-## 2. Các yêu cầu chính đã sử dụng trong cuộc trao đổi
+Sử dụng AI để hỗ trợ phân tích giao diện FAHASA, đề xuất phương án cải tiến thẻ sách, tạo mã HTML/CSS và giải thích cách hoạt động. AI cũng hỗ trợ tạo hình minh họa SVG, chạy thử, soạn bản nháp tài liệu và thao tác đưa bài lên GitHub Pages.
 
-Các trích đoạn dưới đây là yêu cầu thực tế của người dùng; không phải prompt được bịa thêm sau khi làm:
+## 3. Các yêu cầu chính
 
-> Mình muốn chọn website bán sách cho bài cá nhân chương 1, để phân biệt rõ với đồ án nhóm PetMatch về sản phẩm thú cưng.
+Các yêu cầu dưới đây được trích từ cuộc trao đổi:
 
-> Bạn hãy giúp mình chọn một website bán sách phù hợp, rồi hướng dẫn từng bước: khảo sát đủ 5 khu vực theo đề bài, xác định một vấn đề thực tế và làm một trang HTML/CSS cải tiến. Chưa chốt phần cần cải tiến trước khi khảo sát.
+> Bạn hãy giúp mình chọn một website bán sách phù hợp, rồi hướng dẫn từng bước: khảo sát đủ 5 khu vực theo đề bài, xác định một vấn đề thực tế và làm một trang HTML/CSS cải tiến.
 
 > Mình muốn tự thao tác theo hướng dẫn để hiểu cách làm và giải thích được bài của mình.
 
-> okee vậy hãy cải tiến như của bạn đã nói nha
+Phương án tôi lựa chọn sau khi trao đổi với AI là cải tiến thẻ sách: tách tên tác phẩm, tác giả và thông tin bản in; cho phép mở thông tin phiên bản; trình bày rõ giá bán, giá bìa và mức giảm; điều chỉnh bố cục cho màn hình nhỏ. Tôi nhờ Codex hỗ trợ triển khai phương án bằng HTML/CSS và giải thích mã nguồn.
 
-> bạn hãy tự làm hết được ko
+Trong lần xem lại, tôi nhận thấy tên hai mục “Chọn phiên bản” và “Về bản mẫu” khó hiểu, nên yêu cầu điều chỉnh tên và nội dung hướng dẫn. Bản chỉnh sửa sử dụng hai tên “Hướng dẫn chọn sách” và “Giới thiệu trang”.
 
-Trong quá trình trao đổi, người dùng đã được giải thích rằng năm khu vực là năm phần của một website, không phải năm vùng địa lý.
+## 4. Kết quả AI hỗ trợ
 
-## 3. Kết quả AI đề xuất và thực hiện
+- Hỗ trợ khảo sát năm khu vực trên FAHASA, chụp ảnh qua công cụ trình duyệt và soạn bảng nhận xét để tôi tiếp tục đối chiếu, bổ sung đánh giá.
+- Đề xuất tách tên sách, tác giả và thông tin phiên bản để nội dung trên thẻ dễ đọc hơn; ghi nhận giá tại thời điểm khảo sát.
+- Tạo mã trang Góc Đọc gồm bốn sách mẫu, CSS tách riêng và bố cục thích ứng với màn hình máy tính, máy tính bảng và điện thoại.
+- Sử dụng HTML `details/summary` để mở thông tin phiên bản; tạo bốn bìa SVG minh họa.
+- Hỗ trợ chạy thử, điều chỉnh cách trình bày, soạn tài liệu giải thích mã nguồn và hướng dẫn sử dụng; tạo repository và xuất bản GitHub Pages.
 
-1. Chọn FAHASA làm website tham khảo cho bài bán sách.
-2. Đề xuất một số hướng cần kiểm chứng, chưa coi là lỗi trước khảo sát.
-3. Khảo sát trực tiếp năm phần qua trình duyệt và lưu ảnh ngày 19/10/2026.
-4. Xác nhận một số tên dài bị thu gọn ở danh mục; chọn phạm vi cải tiến thẻ sách.
-5. Tạo trang Góc Đọc với bốn sản phẩm, tách thông tin phiên bản và dùng `details/summary` để mở nội dung.
-6. Viết CSS riêng, bố cục 4/2/1 cột; bổ sung focus và giảm chuyển động.
-7. Tạo bốn hình SVG mới; không lấy bìa sách phát hành làm tài nguyên giao diện.
-8. Chuẩn bị bảng khảo sát, nguồn dữ liệu, tài liệu đọc code và hướng dẫn GitHub.
-9. Theo yêu cầu người dùng, tạo repository Public trên tài khoản của sinh viên, tải các file bài làm và xuất bản GitHub Pages; không nộp bài trên LMS.
+## 5. Kiểm tra và điều chỉnh
 
-## 4. Kiểm tra và điều chỉnh của AI
+**Kết quả kiểm tra có AI hỗ trợ:** kiểm tra hiển thị, liên kết, nội dung phiên bản và bố cục ở các kích thước màn hình; đối chiếu những nhận xét chính với website nguồn. Một số điều chỉnh về cỡ chữ và chiều cao vùng tên sách được thực hiện trong quá trình AI chạy thử.
 
-- Thử thêm sách, chọn sản phẩm, tăng số lượng bằng nút cộng và xóa sách trên FAHASA. Đã kiểm chứng trường hợp 2 × 115.000đ = 230.000đ, không đặt mua.
-- Thao tác điền trực tiếp ô số lượng trong công cụ tự động chưa cập nhật tổng ngay; chuyển sang nút cộng của website để kiểm chứng. Không dùng sự cố thao tác tự động đó để kết luận website tính tiền sai.
-- Dữ liệu HTML đọc qua công cụ tìm kiếm có giá khác phiên trình duyệt; bản mẫu dùng giá ghi nhận trong phiên trình duyệt và ghi ngày khảo sát.
-- Đo vùng tên sách để kiểm chứng bị cắt; không chỉ dựa vào phỏng đoán của AI.
-- Khi xem bản mẫu lần đầu, AI điều chỉnh cỡ chữ phụ, font tiêu đề và chiều cao tối thiểu vùng tên để tăng khả năng đọc và căn các phần giá.
-- Kết quả kiểm thử thực tế được cập nhật trong `docs/KIEM_THU.md`.
+**Phần tôi đã thực hiện trong quá trình trao đổi:** lựa chọn lĩnh vực bán sách và phương án cải tiến; mở bản HTML để thử các mục điều hướng; góp ý rằng tên hai mục và phần hướng dẫn khó hiểu; yêu cầu sửa cách diễn đạt. Khi xem tài liệu khảo sát, tôi cũng phản hồi rằng một số ảnh chưa hiển thị đầy đủ nội dung, cần kiểm tra chất lượng ảnh trước khi sử dụng.
 
-## 5. Những kết luận không sử dụng
+**Điểm tôi tự phát hiện ngày 21/10/2026:** Khi xem khối gợi ý ở đầu trang, tôi nhận thấy ký hiệu “01 / 04” khiến tôi tưởng còn các trang hoặc slide tiếp theo và đã hỏi các số còn lại nằm ở đâu. Sau khi tôi nêu thắc mắc, AI kiểm tra mã và xác nhận khối này không có các mục “02/04”, “03/04”, “04/04” hoặc chức năng chuyển slide. Đây là điểm gây nhầm lẫn do tôi phát hiện khi xem giao diện.
 
-- Không kết luận FAHASA thiếu giá giảm, tác giả hoặc thông tin bìa; các thông tin này đã tồn tại trong những phần được quan sát.
-- Không khẳng định bản mẫu làm tăng tỷ lệ mua hàng hay giúp mọi khách hàng mua nhanh hơn; chưa có thử nghiệm người dùng để đo điều đó.
-- Không khẳng định đã kiểm thử trên điện thoại vật lý.
-- Không nhận kết quả do AI khảo sát là trải nghiệm do sinh viên đã tự thực hiện.
+**Hướng sửa được AI hướng dẫn:** Đổi nội dung của phần tử `span.note-number` từ “01 / 04” thành “GỢI Ý” và bỏ thuộc tính `aria-hidden="true"` của nhãn. Việc đổi nhãn giúp thể hiện đúng vai trò của khối; bỏ thuộc tính này để trình đọc màn hình có thể đọc nhãn.
 
-## 6. Phần sinh viên cần hiểu và có thể giải thích
+**Phần AI hỗ trợ sửa mã ngày 21/10/2026:** Sau khi tôi yêu cầu sửa giúp, AI đổi nhãn “01 / 04” thành “GỢI Ý” trong `index.html` và bỏ thuộc tính `aria-hidden="true"` của nhãn. AI kiểm tra lại đoạn HTML và các đường dẫn tài nguyên trong bộ file; không có tài nguyên nội bộ bị thiếu. Đây là phần tôi phát hiện vấn đề và AI thực hiện sửa mã, không ghi thành thao tác tôi tự sửa. Chưa xác nhận tôi đã tự mở bản mới trên trình duyệt hoặc tự chỉnh mã.
 
-- Vì sao tách tên chính và phiên bản thay vì chỉ phóng to tên đầy đủ.
-- Vai trò của `article`, `h3`, `img`, `a`, `details`, `summary`, `del`.
-- Cách `grid-template-columns` và media query thay đổi số cột.
-- Cách dùng đường dẫn tương đối để mở trực tiếp và đưa lên GitHub Pages.
-- Vì sao nút thao tác dẫn tới trang sách thật và trang mẫu không có chức năng đặt hàng.
-- Phân biệt kiểm thử do AI thực hiện với phần tự kiểm tra và tự sửa của sinh viên.
+Phần tự đối chiếu đầy đủ năm khu vực, tự kiểm tra trên các kích thước màn hình và tự sửa mã chưa được xác nhận hoàn tất. Tôi sẽ bổ sung kết quả thực tế vào mục này sau khi thực hiện. Kết quả AI chạy thử được ghi riêng với phần tự kiểm tra này.
 
-Xem `docs/GIAI_THICH_CODE.md` để đọc phần giải thích cụ thể.
+Kết quả chạy thử của Codex ghi nhận bố cục bốn cột ở 1366 px, hai cột ở 768 px và một cột ở 390 px; các khung nhìn này không tràn ngang trong lần kiểm tra. Đây là mô phỏng kích thước bằng trình duyệt, chưa phải kiểm tra trên điện thoại thật. Bài thực hành đánh giá cách hiển thị và thao tác, chưa đo mức tăng doanh số hoặc hiệu quả với người dùng thực tế.
+
+## 6. Nội dung cần nắm để giải thích bài
+
+- Vai trò của `article`, `h3`, `img`, `a`, `details`, `summary` và `del`.
+- Cách CSS Grid và media query thay đổi số cột theo độ rộng màn hình.
+- Cách liên kết `href="#..."` dẫn đến phần có `id` tương ứng trên cùng trang.
+- Lý do tách thông tin phiên bản khỏi tên sách và trình bày riêng giá bán, giá bìa, mức giảm.
+- Cách mở `index.html`, sử dụng đường dẫn tương đối và phân biệt repository với GitHub Pages.
+
+Tôi cần đối chiếu các nội dung trên với mã HTML/CSS và bổ sung phần giải thích bằng lời của mình sau khi tự kiểm tra.

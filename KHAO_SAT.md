@@ -21,20 +21,18 @@
 | **Tìm kiếm** | Nhập “Ove”, nhận 25 kết quả tại thời điểm kiểm tra; kết quả có sách Ove và các sách chứa “Over”. Nhập “zzbooktest987654”, nhận 0 kết quả. | Có số kết quả, phân nhóm kết quả và điều kiện lọc. Website cho biết khi truy vấn có 0 kết quả. | Từ khóa ngắn có thể trả nhiều tên sách khác nhau; người tìm một tác phẩm cụ thể phải tiếp tục thu hẹp lựa chọn. Không kết luận thuật toán tìm kiếm sai. | Có thể gợi ý tên sách đầy đủ hoặc làm nổi phần khớp để người đọc nhận ra tác phẩm muốn tìm. Đây là đề xuất phân tích, chưa được lập trình trong bản HTML/CSS. |
 | **Giỏ hàng** | Thêm sách Ove giá 115.000đ. Ban đầu sản phẩm chưa được chọn nên phần tổng là 0đ. Chọn sản phẩm rồi dùng nút cộng lên 2 cuốn, thành tiền và tổng hiển thị 230.000đ. Xóa sách; website hiện giỏ trống và nút mua sắm. | Có chọn sản phẩm, thay đổi số lượng, giá và tổng; phép tính đã thử cho kết quả đúng; có trạng thái giỏ trống. | Khi có sản phẩm nhưng chưa chọn, tiêu đề tổng tiền 0đ chưa giải thích ngay rằng tổng chỉ tính sản phẩm đã chọn. Đây là một tình huống có thể gây nhầm cho người mới. | Có thể hiển thị “Tạm tính cho 0 sản phẩm đã chọn” hoặc lời nhắc chọn sách. Không cần xây lại giỏ hàng cho phạm vi cải tiến được chọn. |
 
-## 3. Minh chứng
+## 3. Đường dẫn đối chiếu khảo sát
 
-| Ảnh | Nội dung |
+| Khu vực | Đường dẫn |
 | --- | --- |
-| [Trang chủ](docs/evidence/01-trang-chu-desktop.jpg) | Trang chủ sau khi đóng popup đầu phiên. |
-| [Danh mục desktop](docs/evidence/02-danh-muc-desktop.jpg) | Thẻ sách và vùng tên dài bị thu gọn. |
-| [Bộ lọc giá](docs/evidence/03-danh-muc-loc-gia.jpg) | Mức giá đã chọn trong phiên thử. Chưa kiểm tra mọi bộ lọc hoặc toàn bộ danh sách kết quả. |
-| [Chi tiết sách](docs/evidence/04-chi-tiet-sach.jpg) | Thông tin sách Ove và thao tác mua sắm. |
-| [Giỏ hàng ban đầu](docs/evidence/05-gio-hang.jpg) | Có sản phẩm nhưng chưa chọn. |
-| [Giỏ hàng 2 cuốn](docs/evidence/06-gio-hang-so-luong-2.jpg) | Tổng tiền 230.000đ. |
-| [Sau khi xóa](docs/evidence/07-gio-hang-sau-xoa.jpg) | Giỏ hàng trống; đã dọn sản phẩm thử. |
-| [Tìm kiếm Ove](docs/evidence/08-tim-kiem-co-ket-qua.jpg) | Truy vấn có kết quả. |
-| [Tìm kiếm không kết quả](docs/evidence/09-tim-kiem-khong-ket-qua.jpg) | Truy vấn thử 0 kết quả. |
-| [Khung nhìn 390 px](docs/evidence/11-the-sach-mobile.jpg) | Vùng danh sách tại kích thước mô phỏng điện thoại. Không đại diện cho mọi thiết bị/phiên bản trình duyệt. |
+| Trang chủ | https://www.fahasa.com/ |
+| Danh mục Văn học | https://www.fahasa.com/sach-trong-nuoc/van-hoc-trong-nuoc.html |
+| Chi tiết sách Ove | https://www.fahasa.com/nguoi-dan-ong-mang-ten-ove-tai-ban.html |
+| Tìm kiếm có kết quả | https://www.fahasa.com/searchengine?q=Ove |
+| Tìm kiếm không kết quả | https://www.fahasa.com/searchengine?q=zzbooktest987654 |
+| Giỏ hàng | https://www.fahasa.com/checkout/cart/ |
+
+Giỏ hàng phụ thuộc phiên truy cập; đường dẫn không tự tái tạo sản phẩm đã thử. Giá và kết quả tìm kiếm được ghi nhận trong phiên khảo sát, có thể thay đổi.
 
 ## 4. Giới hạn và kết luận khảo sát
 

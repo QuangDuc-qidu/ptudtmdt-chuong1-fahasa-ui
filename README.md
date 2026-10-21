@@ -1,79 +1,82 @@
-# Cải tiến thẻ sách bằng HTML và CSS
+# Góc Đọc — Cải tiến thẻ sách bằng HTML/CSS
 
-Bài cá nhân Chương 1 môn Phát triển ứng dụng TMĐT. Website khảo sát là [FAHASA](https://www.fahasa.com/). Sản phẩm thực hành là **Góc Đọc**, một trang độc lập để minh họa cách trình bày tên sách, tác giả, phiên bản và giá rõ ràng hơn.
+Bài cá nhân Chương 1 môn Phát triển ứng dụng TMĐT. Trang thực hành gồm bốn sách mẫu, tập trung vào cách trình bày tên sách, tác giả, phiên bản và giá.
 
-**Xem trực tiếp:** [Góc Đọc trên GitHub Pages](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/). **Mã nguồn Public:** [repository bài cá nhân](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
+## 1. Giới thiệu
 
-## 1. Vấn đề và phạm vi cải tiến
+Trong phiên khảo sát ngày 19/10/2026, tên dài của một số sách tại danh mục Văn học trên FAHASA bị thu gọn sau khoảng hai dòng. Thông tin bản in, hình thức bìa hoặc quà tặng ở cuối tên có thể bị khuất. Bản thực hành tách các thông tin này để khách đọc và đối chiếu rõ hơn.
 
-Trong phiên khảo sát ngày **19/10/2026**, tại danh mục Văn học, tên một số sách dài chỉ hiển thị khoảng hai dòng. Ví dụ tên đầy đủ của **Bí Mật Tối Thượng** còn có thông tin bìa cứng và chữ ký in ở phía sau, nhưng phần này bị khuất trên thẻ danh sách. Đây là một đánh đổi về bố cục, không phải kết luận toàn bộ website khó sử dụng.
+## 2. Website tham khảo và khảo sát
 
-Bản cải tiến tách tên tác phẩm, tác giả và phiên bản thành các phần riêng. Người xem mở **Thông tin phiên bản** để đọc tên đầy đủ mà không cần thao tác rê chuột. Giá bán tham khảo, giá bìa, phần trăm giảm và số tiền chênh lệch được trình bày riêng.
+- Website: [FAHASA](https://www.fahasa.com/).
+- Nhóm sản phẩm khảo sát: sách, tập trung danh mục Văn học.
+- Năm khu vực: trang chủ, danh mục sản phẩm, chi tiết sản phẩm, tìm kiếm và giỏ hàng.
+- [Bảng khảo sát và các đường dẫn đối chiếu](KHAO_SAT.md).
 
-## 2. Website tham khảo và kết quả khảo sát
+Các nhận xét giới hạn trong phiên đã khảo sát; không phải kết luận về toàn bộ website hoặc mọi khách hàng.
 
-- Website: FAHASA, https://www.fahasa.com/.
-- Phạm vi: tìm và mua sách; khảo sát đủ trang chủ, danh mục, chi tiết sách, tìm kiếm và giỏ hàng.
-- [Bảng khảo sát 5 khu vực](KHAO_SAT.md).
-- [Căn cứ và phương án thiết kế](docs/THIET_KE.md).
-- [Nguồn dữ liệu và hình ảnh](docs/NGUON_DU_LIEU.md).
+## 3. Chức năng
 
-## 3. Chức năng có trong bản HTML/CSS
+- Hiển thị bốn sách, có hình minh họa, tên, tác giả, thông tin bản in và giá.
+- Mở/đóng thông tin phiên bản bằng HTML `details` và `summary`.
+- Trình bày giá bán tham khảo, giá bìa, tỷ lệ giảm và số tiền tiết kiệm.
+- Bố cục bốn cột trên máy tính, hai cột trên máy tính bảng và một cột trên điện thoại.
+- Mục “Hướng dẫn chọn sách” dẫn tới phần giải thích cách xem thông tin trước khi mua.
+- Mục “Giới thiệu trang” dẫn tới phần giới thiệu ở cuối trang.
+- Liên kết “Xem sách tại FAHASA” mở trang sản phẩm tương ứng.
 
-- Bốn sách mẫu, mỗi sách có ảnh minh họa, tên, tác giả, phiên bản, giá và liên kết thao tác.
-- Mở/đóng thông tin phiên bản bằng `details` và `summary` của HTML.
-- Bố cục 4 cột trên máy tính, 2 cột trên tablet và 1 cột trên điện thoại.
-- Điều hướng đến các phần trong trang; liên kết sang đúng trang sách trên FAHASA, mở tab mới.
-- Trạng thái focus cho bàn phím, liên kết bỏ qua phần đầu trang, hỗ trợ giảm chuyển động.
-
-Trang chỉ minh họa giao diện thẻ sách. Tìm kiếm, lọc, giỏ hàng, đăng nhập và thanh toán của cửa hàng không được xây lại trong bản mẫu. Trang không nhận đơn hàng.
+Trang thực hành không có backend, tài khoản, giỏ hàng hoặc thanh toán riêng; không nhận đơn hàng.
 
 ## 4. Công nghệ và tài nguyên
 
-- HTML5, CSS3; CSS tách riêng tại `css/style.css`.
-- Không dùng JavaScript, framework, backend hoặc cơ sở dữ liệu.
-- Bìa SVG được AI viết mới để minh họa, không sao chép bìa sách phát hành hoặc logo FAHASA.
-- Tên sách và tác giả được đối chiếu với các trang nguồn. Giá được ghi nhận trong phiên khảo sát, có thể thay đổi; không phải giá chào bán của một cửa hàng thật trong dự án này.
+- HTML5, CSS3; CSS đặt riêng trong `css/style.css`.
+- Không sử dụng JavaScript, framework, cơ sở dữ liệu hoặc tài nguyên CDN.
+- Bốn ảnh trong `images/` là SVG minh họa do Codex tạo, không phải bìa sách phát hành. Logo Góc Đọc được tạo cho bài thực hành.
+- Tên sách và tác giả tham khảo các trang sản phẩm; giá ghi nhận ngày 19/10/2026, không tự cập nhật.
+
+Nguồn sách minh họa:
+
+- [Bí Mật Tối Thượng — Dan Brown](https://www.fahasa.com/bi-mat-toi-thuong-the-secret-of-secrets-bia-cung.html).
+- [Người Đàn Ông Mang Tên Ove — Fredrik Backman](https://www.fahasa.com/nguoi-dan-ong-mang-ten-ove-tai-ban.html).
+- [Trường Ca Achilles — Madeline Miller](https://www.fahasa.com/truong-ca-achilles.html).
+- [Phía Đông Vườn Địa Đàng — John Steinbeck](https://www.fahasa.com/phia-dong-vuon-dia-dang.html).
 
 ## 5. Cách chạy
 
-**Cách đơn giản:** mở `index.html` bằng Chrome. Giữ nguyên thư mục `css/` và `images/` cạnh file HTML để trang tải đúng tài nguyên. Không cần cài thư viện hay chạy lệnh build.
+Mở `index.html` bằng Chrome hoặc trình duyệt khác. Giữ thư mục `css/` và `images/` cạnh file HTML. Không cần cài thư viện hoặc chạy lệnh build.
 
-**Trong VS Code:** File → Open Folder → chọn thư mục này. Có thể dùng tiện ích Live Server nếu máy đã cài, nhưng tiện ích đó không bắt buộc.
+Trong VS Code: chọn File → Open Folder để mở thư mục chứa `index.html`. Live Server có thể dùng nếu đã cài, nhưng không bắt buộc.
 
-**Kiểm tra điện thoại:** mở Chrome DevTools bằng F12, bật thanh thiết bị bằng Ctrl + Shift + M và chọn độ rộng 390 px. Đây là mô phỏng kích thước, không phải kiểm thử trên điện thoại vật lý.
+- [Website GitHub Pages](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/).
+- [Repository GitHub](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
 
-## 6. Cấu trúc bài làm
+Hai đường dẫn trên là nơi đã xuất bản trước đó. Bộ file xem trước này chưa được đồng bộ lên GitHub; giao diện và tài liệu trực tuyến có thể còn thuộc phiên bản cũ.
+
+## 6. Cải tiến đã thực hiện
+
+Tách tên tác phẩm khỏi thông tin phiên bản, bổ sung vùng mở thông tin đầy đủ, dùng CSS Grid và media query để điều chỉnh số cột. Tên chính không bị cắt bằng giới hạn hai dòng. Các phần giá được trình bày riêng; liên kết và vùng mở thông tin có trạng thái focus cho bàn phím.
+
+Sau khi người học phản hồi rằng tên điều hướng khó hiểu, hai mục được đổi thành “Hướng dẫn chọn sách” và “Giới thiệu trang”; nội dung hướng dẫn cũng được viết lại rõ hơn.
+
+## 7. Hỗ trợ từ AI và tự kiểm tra
+
+Codex hỗ trợ khảo sát, phân tích, tạo HTML/CSS và SVG, chạy thử, chuẩn bị tài liệu và thao tác xuất bản trước đó. Người học chọn lĩnh vực, thống nhất phương án và góp ý về tên điều hướng, hướng dẫn sử dụng cùng chất lượng ảnh. Xem [nhật ký sử dụng AI](AI_USAGE.md).
+
+Trước khi nộp, người học cần tự đối chiếu bảng khảo sát, mở trang ở kích thước máy tính và điện thoại mô phỏng, tự chỉnh ít nhất một điểm do mình phát hiện và giải thích phần HTML/CSS đã sửa. Cập nhật kết quả thực tế trong README hoặc nhật ký AI; bộ file này chưa xác nhận các bước tự kiểm tra đã hoàn thành.
+
+## 8. Cấu trúc file
 
 ```text
 bai-ca-nhan-fahasa/
 ├── index.html
-├── css/style.css
-├── images/                    # 4 bìa SVG tự thiết kế
-├── KHAO_SAT.md
+├── css/
+│   └── style.css
+├── images/
+│   ├── bi-mat-toi-thuong.svg
+│   ├── nguoi-dan-ong-ove.svg
+│   ├── truong-ca-achilles.svg
+│   └── phia-dong-vuon-dia-dang.svg
 ├── README.md
-├── AI_USAGE.md
-├── HUONG_DAN_NOP.md
-└── docs/
-    ├── THIET_KE.md
-    ├── NGUON_DU_LIEU.md
-    ├── GIAI_THICH_CODE.md
-    ├── KIEM_THU.md
-    ├── TU_KIEM_TRA_CA_NHAN.md
-    ├── evidence/              # Ảnh khảo sát FAHASA
-    └── preview/               # Ảnh bản cải tiến
+├── KHAO_SAT.md
+└── AI_USAGE.md
 ```
-
-## 7. Kiểm thử, AI và phần sinh viên thực hiện
-
-- [Kết quả kiểm tra của AI](docs/KIEM_THU.md) ghi riêng những kiểm tra đã thực hiện.
-- [Nhật ký sử dụng AI](AI_USAGE.md) nêu rõ việc khảo sát, thiết kế, viết code, tạo bìa và kiểm tra do AI hỗ trợ.
-- [Giải thích code](docs/GIAI_THICH_CODE.md) dành cho người mới học.
-- Sinh viên cần tự mở trang, đối chiếu nhận xét, sửa ít nhất một điểm do mình phát hiện và ghi tại [phiếu tự kiểm tra](docs/TU_KIEM_TRA_CA_NHAN.md). Không dùng kết quả kiểm tra của AI để nhận là mình đã tự làm những bước này.
-- [Hướng dẫn đưa bài lên GitHub và nộp](HUONG_DAN_NOP.md).
-
-## 8. Ảnh giao diện
-
-![Bản cải tiến trên máy tính](docs/preview/desktop.jpg)
-
-![Thẻ sách trên điện thoại, thông tin phiên bản đang mở](docs/preview/mobile-card.jpg)
