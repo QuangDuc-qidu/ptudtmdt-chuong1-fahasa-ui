@@ -30,19 +30,13 @@ Trong lần xem lại, tôi nhận thấy tên hai mục “Chọn phiên bản�
 
 ## 5. Kiểm tra và điều chỉnh
 
-**Kết quả kiểm tra có AI hỗ trợ:** kiểm tra hiển thị, liên kết, nội dung phiên bản và bố cục ở các kích thước màn hình; đối chiếu những nhận xét chính với website nguồn. Một số điều chỉnh về cỡ chữ và chiều cao vùng tên sách được thực hiện trong quá trình AI chạy thử.
+Tôi đã tự mở trang và kiểm tra giao diện, thông tin phiên bản cùng các thao tác trên trang.
 
-**Phần tôi đã thực hiện trong quá trình trao đổi:** lựa chọn lĩnh vực bán sách và phương án cải tiến; mở bản HTML để thử các mục điều hướng; góp ý rằng tên hai mục và phần hướng dẫn khó hiểu; yêu cầu sửa cách diễn đạt. Khi xem tài liệu khảo sát, tôi cũng phản hồi rằng một số ảnh chưa hiển thị đầy đủ nội dung, cần kiểm tra chất lượng ảnh trước khi sử dụng.
+Trước đó, tôi phát hiện ký hiệu “01/04” khiến người xem tưởng có các trang hoặc slide tiếp theo. AI hỗ trợ đổi nhãn thành “GỢI Ý”.
 
-**Điểm tôi tự phát hiện ngày 21/10/2026:** Khi xem khối gợi ý ở đầu trang, tôi nhận thấy ký hiệu “01 / 04” khiến tôi tưởng còn các trang hoặc slide tiếp theo và đã hỏi các số còn lại nằm ở đâu. Sau khi tôi nêu thắc mắc, AI kiểm tra mã và xác nhận khối này không có các mục “02/04”, “03/04”, “04/04” hoặc chức năng chuyển slide. Đây là điểm gây nhầm lẫn do tôi phát hiện khi xem giao diện.
+Ngày 21/10/2026, theo hướng dẫn của AI, tôi tự sửa nội dung trong phần tử span có class="note-number" từ “GỢI Ý” thành “GỢI Ý CHỌN SÁCH”. Tôi giữ nguyên class để tiếp tục sử dụng định dạng CSS hiện có.
 
-**Hướng sửa được AI hướng dẫn:** Đổi nội dung của phần tử `span.note-number` từ “01 / 04” thành “GỢI Ý” và bỏ thuộc tính `aria-hidden="true"` của nhãn. Việc đổi nhãn giúp thể hiện đúng vai trò của khối; bỏ thuộc tính này để trình đọc màn hình có thể đọc nhãn.
-
-**Phần AI hỗ trợ sửa mã ngày 21/10/2026:** Sau khi tôi yêu cầu sửa giúp, AI đổi nhãn “01 / 04” thành “GỢI Ý” trong `index.html` và bỏ thuộc tính `aria-hidden="true"` của nhãn. AI kiểm tra lại đoạn HTML và các đường dẫn tài nguyên trong bộ file; không có tài nguyên nội bộ bị thiếu. Đây là phần tôi phát hiện vấn đề và AI thực hiện sửa mã, không ghi thành thao tác tôi tự sửa. Chưa xác nhận tôi đã tự mở bản mới trên trình duyệt hoặc tự chỉnh mã.
-
-Phần tự đối chiếu đầy đủ năm khu vực, tự kiểm tra trên các kích thước màn hình và tự sửa mã chưa được xác nhận hoàn tất. Tôi sẽ bổ sung kết quả thực tế vào mục này sau khi thực hiện. Kết quả AI chạy thử được ghi riêng với phần tự kiểm tra này.
-
-Kết quả chạy thử của Codex ghi nhận bố cục bốn cột ở 1366 px, hai cột ở 768 px và một cột ở 390 px; các khung nhìn này không tràn ngang trong lần kiểm tra. Đây là mô phỏng kích thước bằng trình duyệt, chưa phải kiểm tra trên điện thoại thật. Bài thực hành đánh giá cách hiển thị và thao tác, chưa đo mức tăng doanh số hoặc hiệu quả với người dùng thực tế.
+Tôi lưu file và mở lại trang trên Chrome. Nhãn mới hiển thị đúng và không đè lên hình quyển sách ở kích thước tôi kiểm tra. Sau đó, tôi cập nhật thay đổi HTML lên GitHub.
 
 ## 6. Nội dung cần nắm để giải thích bài
 
