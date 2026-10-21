@@ -50,7 +50,7 @@ Trong VS Code: chọn File → Open Folder để mở thư mục chứa `index.h
 - [Website GitHub Pages](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/).
 - [Repository GitHub](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
 
-Hai đường dẫn trên là nơi đã xuất bản trước đó. Bộ file xem trước này chưa được đồng bộ lên GitHub; giao diện và tài liệu trực tuyến có thể còn thuộc phiên bản cũ.
+Repository lưu mã nguồn và tài liệu bài làm. GitHub Pages dùng để xem trực tiếp giao diện đã triển khai.
 
 ## 6. Cải tiến đã thực hiện
 
@@ -62,7 +62,7 @@ Sau khi người học phản hồi rằng tên điều hướng khó hiểu, ha
 
 Codex hỗ trợ khảo sát, phân tích, tạo HTML/CSS và SVG, chạy thử, chuẩn bị tài liệu và thao tác xuất bản trước đó. Người học chọn lĩnh vực, thống nhất phương án và góp ý về tên điều hướng, hướng dẫn sử dụng cùng chất lượng ảnh. Xem [nhật ký sử dụng AI](AI_USAGE.md).
 
-Trước khi nộp, người học cần tự đối chiếu bảng khảo sát, mở trang ở kích thước máy tính và điện thoại mô phỏng, tự chỉnh ít nhất một điểm do mình phát hiện và giải thích phần HTML/CSS đã sửa. Cập nhật kết quả thực tế trong README hoặc nhật ký AI; bộ file này chưa xác nhận các bước tự kiểm tra đã hoàn thành.
+Tôi đã tự mở trang và kiểm tra giao diện cùng các thao tác. Theo hướng dẫn của AI, tôi tự sửa nhãn “GỢI Ý” thành “GỢI Ý CHỌN SÁCH” trong index.html, lưu file, mở lại trên Chrome và cập nhật lên GitHub. Nhãn mới hiển thị đúng, không đè lên hình ở kích thước tôi kiểm tra. Quá trình hỗ trợ và chỉnh sửa được ghi trong AI_USAGE.md.
 
 ## 8. Cấu trúc file
 
