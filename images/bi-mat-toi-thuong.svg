@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" role="img" aria-labelledby="title desc">
-  <title id="title">Bìa minh họa Bí Mật Tối Thượng</title><desc id="desc">Thiết kế hình học màu đỏ nâu và vàng, không phải bìa phát hành.</desc>
-  <rect width="240" height="340" rx="3" fill="#7f2e29"/>
-  <rect x="7" width="3" height="340" fill="#b68456" opacity=".5"/>
-  <rect x="21" y="20" width="198" height="300" fill="none" stroke="#d5bb80" opacity=".55"/>
-  <g fill="none" stroke="#d5bb80" opacity=".5"><circle cx="120" cy="226" r="61"/><circle cx="120" cy="226" r="44"/><path d="m120 157 60 104H60l60-104Zm0 137-60-104h120l-60 104Z"/><path d="M120 153v145M48 226h144"/></g>
-  <g fill="#f3e2b8" text-anchor="middle" font-family="Arial,sans-serif"><text x="120" y="56" font-size="15" letter-spacing="3">DAN BROWN</text><text x="120" y="104" font-size="26">BÍ MẬT</text><text x="120" y="136" font-size="26">TỐI THƯỢNG</text><text x="120" y="306" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">BÌA MINH HỌA</text></g>
-</svg>

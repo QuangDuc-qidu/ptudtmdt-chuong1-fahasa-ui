@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" role="img" aria-labelledby="title desc">
-  <title id="title">Bìa minh họa Trường Ca Achilles</title><desc id="desc">Họa tiết cung tròn và nhành lá trên nền đất nung, không phải bìa phát hành.</desc>
-  <rect width="240" height="340" rx="3" fill="#b76541"/>
-  <rect x="7" width="3" height="340" fill="#f0d9ac" opacity=".5"/>
-  <path d="M57 280V174a63 63 0 0 1 126 0v106M73 280V174a47 47 0 0 1 94 0v106" fill="none" stroke="#efd6aa" stroke-width="1.5" opacity=".8"/>
-  <g fill="none" stroke="#efd6aa" stroke-width="2"><path d="M119 277c-33-22-37-56-29-86m30 86c34-22 38-56 30-86"/><path d="m97 256-17-5m13-10-17-8m15-9-15-9m15-7-12-13m60 61 17-5m-13-10 17-8m-15-9 15-9m-15-7 12-13"/></g>
-  <g fill="#fff0cd" text-anchor="middle" font-family="Arial,sans-serif"><text x="120" y="39" font-size="12" letter-spacing="1.5">MADELINE MILLER</text><text x="120" y="83" font-size="23">TRƯỜNG CA</text><text x="120" y="116" font-size="29">ACHILLES</text><text x="120" y="320" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">BÌA MINH HỌA</text></g>
-</svg>
