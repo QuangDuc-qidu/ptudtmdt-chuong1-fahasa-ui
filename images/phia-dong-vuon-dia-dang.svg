@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" role="img" aria-labelledby="title desc">
+  <title id="title">Bìa minh họa Phía Đông Vườn Địa Đàng</title><desc id="desc">Mặt trời và những ngọn đồi xanh, không phải bìa phát hành.</desc>
+  <rect width="240" height="340" rx="3" fill="#e3dfc9"/>
+  <rect x="7" width="3" height="340" fill="#697a65" opacity=".4"/>
+  <circle cx="172" cy="177" r="34" fill="#c2844e"/>
+  <path d="M0 236c45-59 78-38 120-14 41-52 79-59 120-45v163H0Z" fill="#658275"/>
+  <path d="M0 273c49-42 94-48 143-17 31-31 62-41 97-35v119H0Z" fill="#365b50"/>
+  <path d="M0 309c74-46 159-32 240-8v39H0Z" fill="#23463c"/>
+  <g fill="#24483e" text-anchor="middle" font-family="Arial,sans-serif"><text x="120" y="39" font-size="12" letter-spacing="2">JOHN STEINBECK</text><text x="120" y="82" font-size="27">PHÍA ĐÔNG</text><text x="120" y="114" font-size="26">VƯỜN ĐỊA ĐÀNG</text></g>
+  <text x="120" y="320" fill="#efe7cb" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">BÌA MINH HỌA</text>
+</svg>
