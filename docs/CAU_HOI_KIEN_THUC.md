@@ -32,4 +32,4 @@ Một đề xuất của AI là tăng cỡ chữ nhãn “Bìa cứng/Bìa mềm
 
 Đề xuất căn nút cũng được kiểm chứng: khi mở thông tin sách đầu, bản Buổi 1 làm nút đầu thấp hơn các nút còn lại 78 px; bản Buổi 2 dùng Grid `stretch`, Flexbox theo cột và `margin-top: auto` cho cụm giá nên bốn nút cùng hàng có cùng tọa độ dọc. Ảnh trước/sau và cách kiểm tra nằm trong [báo cáo kiểm thử](KIEM_THU.md).
 
-Các lượt sửa và kiểm thử nêu trên do Codex hỗ trợ thực hiện, chưa phải ghi nhận sinh viên đã tự kiểm tra độc lập.
+Các thực nghiệm và số đo nêu trên do Codex hỗ trợ thực hiện. Ngày 04/11/2026, Nguyễn Quang Đức xác nhận đã tự sửa nhãn bìa từ 10 lên 12 px và mở trang kiểm tra; quá trình được ghi trong [nhật ký AI](../AI_USAGE.md), mục 7.5. Phần trả lời được AI hỗ trợ giải thích; sinh viên cần hiểu và trình bày được bằng lời của mình.

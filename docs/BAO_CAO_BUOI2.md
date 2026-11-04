@@ -93,4 +93,4 @@ Lỗi được xử lý thêm: nhãn “Bìa cứng/Bìa mềm” có `font-size
 - [Sau khi hoàn thiện](../screenshots/final-desktop.png).
 - [Báo cáo kiểm thử và các lỗi đã sửa](KIEM_THU.md).
 
-Lượt sửa nhãn, thực nghiệm và kiểm thử bổ sung do Codex hỗ trợ thực hiện. Yêu cầu sinh viên tự sửa độc lập cần được sinh viên thực hiện và giải thích trực tiếp; kết quả công cụ không được dùng để xác nhận thay cho thao tác đó.
+Codex đã hỗ trợ lượt sửa nhãn, thực nghiệm và kiểm thử bổ sung được mô tả ở trên. Ngày 04/11/2026, Nguyễn Quang Đức xác nhận đã tự sửa nhãn bìa từ 10 lên 12 px và mở trang kiểm tra. Các số đo và ảnh kiểm thử nhiều kích thước vẫn được ghi là kết quả của Codex. Xem [nhật ký AI](../AI_USAGE.md), mục 7.5, để phân biệt phần sinh viên xác nhận tự thực hiện.

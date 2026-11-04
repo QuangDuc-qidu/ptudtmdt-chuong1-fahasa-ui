@@ -52,4 +52,4 @@ Ngày kiểm tra bổ sung: **04/11/2026**. Môi trường: Chromium trong trìn
 
 ## 4. Phạm vi xác nhận
 
-Đã hoàn tất sửa mã và kiểm thử có AI hỗ trợ. Chưa ghi nhận sinh viên tự thực hiện một thay đổi độc lập của Buổi 2; phần này cần được xác nhận bằng thao tác và giải thích trực tiếp của sinh viên. Không kiểm thử giỏ hàng hoặc thanh toán vì bài chỉ có HTML/CSS.
+Đã hoàn tất sửa mã và kiểm thử có AI hỗ trợ. Ngày 04/11/2026, Nguyễn Quang Đức xác nhận đã tự sửa nhãn bìa từ 10 lên 12 px và mở trang kiểm tra. Bảng kết quả, số đo và ảnh nhiều kích thước ở trên do Codex thực hiện; xác nhận của sinh viên được ghi riêng trong [nhật ký AI](../AI_USAGE.md). Không kiểm thử giỏ hàng hoặc thanh toán vì bài chỉ có HTML/CSS.
