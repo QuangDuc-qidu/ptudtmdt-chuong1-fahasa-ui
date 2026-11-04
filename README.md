@@ -1,82 +1,79 @@
-# Góc Đọc — Cải tiến thẻ sách bằng HTML/CSS
+# Góc Đọc - Bài cá nhân Buổi 2: HTML5 và CSS3
 
-Bài cá nhân Chương 1 môn Phát triển ứng dụng TMĐT. Trang thực hành gồm bốn sách mẫu, tập trung vào cách trình bày tên sách, tác giả, phiên bản và giá.
+**Sinh viên:** Nguyễn Quang Đức. Bài thực hành tiếp tục website Buổi 1 trong cùng repository, tập trung cải thiện khu vực bốn thẻ sách `section#tu-sach`.
 
-## 1. Giới thiệu
+- [Xem website](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/).
+- [Repository](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
+- [Báo cáo thực hành theo tám bước](docs/BAO_CAO_BUOI2.md).
+- [Báo cáo kiểm thử, lỗi và cách sửa](docs/KIEM_THU.md).
+- [Bảy câu hỏi kiến thức](docs/CAU_HOI_KIEN_THUC.md).
+- [Khảo sát Buổi 1](KHAO_SAT.md), [nhật ký AI đã có](AI_USAGE.md).
 
-Trong phiên khảo sát ngày 19/10/2026, tên dài của một số sách tại danh mục Văn học trên FAHASA bị thu gọn sau khoảng hai dòng. Thông tin bản in, hình thức bìa hoặc quà tặng ở cuối tên có thể bị khuất. Bản thực hành tách các thông tin này để khách đọc và đối chiếu rõ hơn.
+## 1. Website tham khảo và phạm vi cải thiện
 
-## 2. Website tham khảo và khảo sát
+Website tham khảo: [FAHASA](https://www.fahasa.com/), nhóm sách Văn học. Bảng khảo sát và các nguồn được giữ trong `KHAO_SAT.md`. Bản thực hành Góc Đọc kế thừa bốn sách, hình minh họa và nội dung từ Buổi 1 tại commit `93eca59`; không tạo website mới.
 
-- Website: [FAHASA](https://www.fahasa.com/).
-- Nhóm sản phẩm khảo sát: sách, tập trung danh mục Văn học.
-- Năm khu vực: trang chủ, danh mục sản phẩm, chi tiết sản phẩm, tìm kiếm và giỏ hàng.
-- [Bảng khảo sát và các đường dẫn đối chiếu](KHAO_SAT.md).
+Các nhận xét dưới đây áp dụng cho bản Góc Đọc trước cải tiến, không phải nhận xét mới về website FAHASA.
 
-Các nhận xét giới hạn trong phiên đã khảo sát; không phải kết luận về toàn bộ website hoặc mọi khách hàng.
+| Vấn đề | Hướng cải thiện | Kết quả |
+|---|---|---|
+| Mở thông tin sách làm nút lệch hàng | Grid stretch; Flexbox theo cột; margin tự động cho giá | Các nút cùng hàng khi mở sách đầu |
+| Một số chữ phụ chỉ 11 px | Tăng lên 12 px; padding nội dung thành 20 px | Chữ và khoảng cách rõ hơn |
+| Nút và vùng mở thông tin thiếu phản hồi nhẹ | Transition màu 0,2 giây; hover gạch chân; giữ focus | Có phản hồi chuột và bàn phím |
+| Nhãn Bìa cứng/Bìa mềm chỉ 10 px | Tăng `.binding-label` thành 12 px | Không vượt khung ở ba kích thước |
 
-## 3. Chức năng
+## 2. Kỹ thuật đã thực hành
 
-- Hiển thị bốn sách, có hình minh họa, tên, tác giả, thông tin bản in và giá.
-- Mở/đóng thông tin phiên bản bằng HTML `details` và `summary`.
-- Trình bày giá bán tham khảo, giá bìa, tỷ lệ giảm và số tiền tiết kiệm.
-- Bố cục bốn cột trên máy tính, hai cột trên máy tính bảng và một cột trên điện thoại.
-- Mục “Hướng dẫn chọn sách” dẫn tới phần giải thích cách xem thông tin trước khi mua.
-- Mục “Giới thiệu trang” dẫn tới phần giới thiệu ở cuối trang.
-- Liên kết “Xem sách tại FAHASA” mở trang sản phẩm tương ứng.
+- HTML semantic: `header`, `nav`, `main`, `section`, `article`, `footer`; thứ bậc `h1/h2/h3`; ảnh có alt; liên kết điều hướng và danh sách hướng dẫn.
+- Bổ sung `time datetime` cho ngày tham khảo giá; liên kết phần lưu ý bằng `aria-describedby`.
+- CSS ngoài trong `css/style.css`; selector phần tử, class và hậu duệ.
+- Box Model: margin, padding, border, border-radius và `box-sizing: border-box`.
+- Flexbox cho menu, giá và nút; Flexbox theo cột để bố trí nội dung trong thẻ.
+- Grid bốn cột, hai cột ở tối đa 1050 px và một cột ở tối đa 600 px.
+- `:hover`, `:focus-visible`, transition và quy tắc giảm chuyển động.
+- `details/summary` mở thông tin phiên bản bằng HTML có sẵn. Không dùng JavaScript, backend hoặc framework CSS.
 
-Trang thực hành không có backend, tài khoản, giỏ hàng hoặc thanh toán riêng; không nhận đơn hàng.
+## 3. Cách chạy và đối chiếu
 
-## 4. Công nghệ và tài nguyên
+Giải nén rồi mở `index.html` bằng Chrome. Giữ `css/` và `images/` cạnh file HTML; không cần cài thư viện hay build. Có thể dùng Live Server trong VS Code nếu đã cài.
 
-- HTML5, CSS3; CSS đặt riêng trong `css/style.css`.
-- Không sử dụng JavaScript, framework, cơ sở dữ liệu hoặc tài nguyên CDN.
-- Bốn ảnh trong `images/` là SVG minh họa do Codex tạo, không phải bìa sách phát hành. Logo Góc Đọc được tạo cho bài thực hành.
-- Tên sách và tác giả tham khảo các trang sản phẩm; giá ghi nhận ngày 19/10/2026, không tự cập nhật.
+Mở `before/index.html` để đối chiếu mã Buổi 1. Thư mục `before/` chỉ giữ HTML, CSS và ảnh gốc phục vụ kiểm chứng.
 
-Nguồn sách minh họa:
+## 4. Ảnh trước và sau
 
-- [Bí Mật Tối Thượng — Dan Brown](https://www.fahasa.com/bi-mat-toi-thuong-the-secret-of-secrets-bia-cung.html).
-- [Người Đàn Ông Mang Tên Ove — Fredrik Backman](https://www.fahasa.com/nguoi-dan-ong-mang-ten-ove-tai-ban.html).
-- [Trường Ca Achilles — Madeline Miller](https://www.fahasa.com/truong-ca-achilles.html).
-- [Phía Đông Vườn Địa Đàng — John Steinbeck](https://www.fahasa.com/phia-dong-vuon-dia-dang.html).
+Trước: mở thông tin sách đầu làm nút thấp hơn các nút còn lại 78 px.
 
-## 5. Cách chạy
+![Trước cải tiến](screenshots/baseline-open-details.png)
 
-Mở `index.html` bằng Chrome hoặc trình duyệt khác. Giữ thư mục `css/` và `images/` cạnh file HTML. Không cần cài thư viện hoặc chạy lệnh build.
+Sau: các thẻ cùng hàng giãn chiều cao, giá và nút nằm thẳng hàng.
 
-Trong VS Code: chọn File → Open Folder để mở thư mục chứa `index.html`. Live Server có thể dùng nếu đã cài, nhưng không bắt buộc.
+![Sau cải tiến](screenshots/final-open-details.png)
 
-- [Website GitHub Pages](https://quangduc-qidu.github.io/ptudtmdt-chuong1-fahasa-ui/).
-- [Repository GitHub](https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui).
+[Giao diện hoàn thiện 1366 px](screenshots/final-desktop.png) · [768 px](screenshots/final-768.png) · [390 px](screenshots/final-390.png). Các ảnh còn lại và phương pháp đo nằm trong báo cáo kiểm thử.
 
-Repository lưu mã nguồn và tài liệu bài làm. GitHub Pages dùng để xem trực tiếp giao diện đã triển khai.
+## 5. Kết quả kiểm tra
 
-## 6. Cải tiến đã thực hiện
+Ngày 04/11/2026, Codex chạy lại trên trình duyệt ở 1366, 768 và 390 px: bố cục lần lượt 4/2/1 cột, không tràn ngang; bốn ảnh tải được; nhãn bìa 12 px nằm trong thẻ; các liên kết neo có đích; mở/đóng thông tin bằng chuột và Enter, chuyển focus bằng Tab hoạt động.
 
-Tách tên tác phẩm khỏi thông tin phiên bản, bổ sung vùng mở thông tin đầy đủ, dùng CSS Grid và media query để điều chỉnh số cột. Tên chính không bị cắt bằng giới hạn hai dòng. Các phần giá được trình bày riêng; liên kết và vùng mở thông tin có trạng thái focus cho bàn phím.
+Đã chạy biến thể `justify-content: center` và Grid ba cột trên bản sao để quan sát; mã chính giữ `space-between` và bố cục 4/2/1. Xem [kết quả chi tiết](docs/KIEM_THU.md).
 
-Sau khi người học phản hồi rằng tên điều hướng khó hiểu, hai mục được đổi thành “Hướng dẫn chọn sách” và “Giới thiệu trang”; nội dung hướng dẫn cũng được viết lại rõ hơn.
+## 6. Nguồn và giới hạn
 
-## 7. Hỗ trợ từ AI và tự kiểm tra
+Bốn bìa SVG do AI tạo để minh họa, không phải bìa phát hành. Tên sách, tác giả và giá tham khảo kế thừa khảo sát ngày 19/10/2026; giá không tự cập nhật. Liên kết sách trỏ tới trang tương ứng tại FAHASA; trang thực hành không nhận đơn hàng.
 
-Codex hỗ trợ khảo sát, phân tích, tạo HTML/CSS và SVG, chạy thử, chuẩn bị tài liệu và thao tác xuất bản trước đó. Người học chọn lĩnh vực, thống nhất phương án và góp ý về tên điều hướng, hướng dẫn sử dụng cùng chất lượng ảnh. Xem [nhật ký sử dụng AI](AI_USAGE.md).
+Codex hỗ trợ hoàn thiện mã, tài liệu và kiểm thử. Nhật ký `AI_USAGE.md` hiện có được giữ nguyên trong đợt cập nhật này. Phần sinh viên tự sửa độc lập ở Bước 8 và khả năng tự giải thích cần được sinh viên thực hiện trực tiếp; báo cáo không xác nhận thay bằng kết quả của công cụ.
 
-Tôi đã tự mở trang và kiểm tra giao diện cùng các thao tác. Theo hướng dẫn của AI, tôi tự sửa nhãn “GỢI Ý” thành “GỢI Ý CHỌN SÁCH” trong index.html, lưu file, mở lại trên Chrome và cập nhật lên GitHub. Nhãn mới hiển thị đúng, không đè lên hình ở kích thước tôi kiểm tra. Quá trình hỗ trợ và chỉnh sửa được ghi trong AI_USAGE.md.
-
-## 8. Cấu trúc file
+## 7. Cấu trúc bài
 
 ```text
-bai-ca-nhan-fahasa/
-├── index.html
-├── css/
-│   └── style.css
-├── images/
-│   ├── bi-mat-toi-thuong.svg
-│   ├── nguoi-dan-ong-ove.svg
-│   ├── truong-ca-achilles.svg
-│   └── phia-dong-vuon-dia-dang.svg
-├── README.md
-├── KHAO_SAT.md
-└── AI_USAGE.md
+index.html
+css/style.css
+images/                  # Bốn bìa SVG kế thừa Buổi 1
+before/                  # HTML/CSS/ảnh Buổi 1 để so sánh
+screenshots/             # Ảnh thực tế trước/sau và kiểm thử
+docs/BAO_CAO_BUOI2.md
+docs/KIEM_THU.md
+docs/CAU_HOI_KIEN_THUC.md
+KHAO_SAT.md
+AI_USAGE.md               # Giữ nguyên
 ```
