@@ -7,7 +7,7 @@
 - [Báo cáo thực hành theo tám bước](docs/BAO_CAO_BUOI2.md).
 - [Báo cáo kiểm thử, lỗi và cách sửa](docs/KIEM_THU.md).
 - [Bảy câu hỏi kiến thức](docs/CAU_HOI_KIEN_THUC.md).
-- [Khảo sát Buổi 1](KHAO_SAT.md), [nhật ký AI đã có](AI_USAGE.md).
+- [Khảo sát Buổi 1](KHAO_SAT.md), [nhật ký sử dụng AI](AI_USAGE.md).
 
 ## 1. Website tham khảo và phạm vi cải thiện
 
@@ -61,7 +61,7 @@ Ngày 04/11/2026, Codex chạy lại trên trình duyệt ở 1366, 768 và 390 
 
 Bốn bìa SVG do AI tạo để minh họa, không phải bìa phát hành. Tên sách, tác giả và giá tham khảo kế thừa khảo sát ngày 19/10/2026; giá không tự cập nhật. Liên kết sách trỏ tới trang tương ứng tại FAHASA; trang thực hành không nhận đơn hàng.
 
-Codex hỗ trợ hoàn thiện mã, tài liệu và kiểm thử. Nhật ký `AI_USAGE.md` hiện có được giữ nguyên trong đợt cập nhật này. Phần sinh viên tự sửa độc lập ở Bước 8 và khả năng tự giải thích cần được sinh viên thực hiện trực tiếp; báo cáo không xác nhận thay bằng kết quả của công cụ.
+Codex hỗ trợ hoàn thiện mã, tài liệu và kiểm thử. Nhật ký `AI_USAGE.md` đã bổ sung quá trình Buổi 2. Ngày 04/11/2026, Nguyễn Quang Đức xác nhận đã tự sửa nhãn bìa từ 10 lên 12 px và mở trang kiểm tra. Các số đo, ảnh kiểm thử nhiều kích thước và thực nghiệm bố cục là kết quả kiểm tra của Codex; phần sinh viên tự làm được ghi riêng trong nhật ký.
 
 ## 7. Cấu trúc bài
 
@@ -75,5 +75,5 @@ docs/BAO_CAO_BUOI2.md
 docs/KIEM_THU.md
 docs/CAU_HOI_KIEN_THUC.md
 KHAO_SAT.md
-AI_USAGE.md               # Giữ nguyên
+AI_USAGE.md               # Nhật ký Buổi 1 và Buổi 2
 ```
