@@ -1,0 +1,15 @@
+.text-background { background-image: url("../images/bit-logo.png"); background-size: 30px 30px; background-repeat: repeat; background-attachment: fixed; }
+.text-background .back { padding: 8px 12px; background: #fff; }
+.text-sheet { padding: 24px 40px 48px; background: #fff; border: 1px solid #cbd5e1; }
+.text-sheet section { padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.ueh { color: blue; text-align: center; font-weight: bold; text-decoration: underline; font-size: 30px; }
+.faculty { color: red; text-align: right; font-style: italic; border: 3px dotted yellow; border-radius: 14px; background-color: gray; font-size: 15px; opacity: .5; padding: 16px; }
+.bit-shadow { margin: 20px 0; padding: 28px 24px; width: fit-content; background: #dce7b2; color: #a8d529; font-size: 58px; font-weight: 700; line-height: 1.2; text-shadow: 3px 3px 0 #ad0a0a, 6px 6px 0 #a60505, 8px 8px 8px #ad0000, 0 0 16px #6b8e23; }
+.overflow-examples { display: flex; gap: 36px; flex-wrap: wrap; }
+.overflow-examples article { min-width: 190px; }
+.overflow-examples h3 { font-size: 16px; }
+.overflow-box { box-sizing: content-box; width: 100px; height: 50px; border: 1px solid #202c39; margin: 16px 0; font: 16px/1.4 Arial,sans-serif; }
+.hidden-text { overflow: hidden; }
+.ellipsis-text { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.nowrap-text { overflow: hidden; white-space: nowrap; text-overflow: clip; }
+@media(max-width:600px) { .text-sheet { padding: 16px 20px; } .bit-shadow { font-size: 42px; padding: 20px 12px; } }
