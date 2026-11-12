@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b171d">
+  <title>Nguyễn Quang Đức · Anh hùng JavaScript</title>
+  <link rel="stylesheet" href="trandau.css">
+  <script src="trandau.js" defer></script>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="AnhHungJavascript_vs_RongGia.html" aria-label="Anh hùng JavaScript — trang trận đấu">
+      <svg viewBox="0 0 32 38" aria-hidden="true"><path d="M16 2 29 8v13c0 7-13 15-13 15S3 28 3 21V8Z"/><path d="m10 22 6-12 6 12M12 18h8"/></svg>
+      <span>JAVASCRIPT<span class="brand-sub">HÀNH TRÌNH ANH HÙNG</span></span>
+    </a>
+    <div class="student"><strong>Nguyễn Quang Đức</strong><span>MSSV 31241026319 · Buổi 4</span></div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-heading">
+      <div><p class="eyebrow">BÀI 6 · ĐẤU TRƯỜNG</p><h1>Hẻm núi <em>tro tàn.</em></h1><p class="intro">Một anh hùng. Một con rồng. Mỗi lượt đánh là một cơ hội.</p></div>
+      <button id="sound-toggle" class="button quiet" type="button" aria-pressed="false">♪ <span>Âm thanh: Tắt</span></button>
+    </div>
+
+    <div class="battle-layout">
+      <section class="battle-panel" aria-label="Đấu trường anh hùng và rồng">
+        <div class="arena" id="arena">
+          <svg class="landscape" viewBox="0 0 1100 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#142a37"/><stop offset="1" stop-color="#2f5358"/></linearGradient><radialGradient id="moon"><stop stop-color="#e3e5c6" stop-opacity=".25"/><stop offset="1" stop-color="#dae7cd" stop-opacity="0"/></radialGradient></defs>
+            <path fill="url(#sky)" d="M0 0h1100v560H0z"/><circle fill="url(#moon)" cx="700" cy="160" r="140"/><circle fill="#d4d7b7" cx="700" cy="155" r="36" opacity=".75"/>
+            <g fill="#cbd9ce" opacity=".5"><circle cx="180" cy="100" r="1.5"/><circle cx="335" cy="170" r="1"/><circle cx="500" cy="60" r="1.4"/><circle cx="870" cy="100" r="1.5"/><circle cx="960" cy="190" r="1"/><circle cx="90" cy="220" r="1.2"/></g>
+            <path fill="#23414a" d="M0 290 170 110l120 180L440 160 560 300 760 180 900 290l130-130 70 70v330H0Z"/>
+            <path fill="#19343e" d="m0 390 190-170 130 120 135-100 120 140 190-95 150 70 130-90 55 50v245H0Z"/>
+            <g fill="#122b33"><path d="M30 410V280h35v-25h26v25h38v130ZM48 285v-35h14v35m25 0v-35h14v35M160 420V330h55v-35h24v125ZM880 430V310h38v-80h25v80h37v120Z"/><path d="M1000 440v-90h55v-55h15v145Z"/></g>
+            <path fill="#11242b" d="M0 430q200-35 370 0t340-5 390 5v130H0Z"/>
+            <path fill="#1a2d31" d="M0 474q230-18 500 0t600-4v90H0Z"/>
+            <path stroke="#6e7770" stroke-opacity=".2" fill="none" d="m30 490 85-6 28 10m197 4 70-6 42 9m280-7 58 6 27-9m112 11 98-10"/>
+            <g fill="#bb7344" opacity=".5"><circle cx="100" cy="440" r="2"/><circle cx="515" cy="470" r="2"/><circle cx="1025" cy="440" r="1.5"/></g>
+          </svg>
+          <div class="vignette"></div>
+
+          <div class="health-hud">
+            <div class="health-block hero-health"><div class="health-title"><span id="hero-role">ANH HÙNG</span><span class="level" id="hero-level">LV. 5</span></div><div class="health-track" role="progressbar" id="hero-health-meter" aria-label="Máu anh hùng" aria-valuemin="0" aria-valuemax="105" aria-valuenow="105"><div id="hero-hp-bar"></div></div><p><b id="hero-hp-text">105 / 105</b><span>HP</span></p></div>
+            <div class="round"><span>LƯỢT</span><strong id="round-count">00</strong></div>
+            <div class="health-block dragon-health"><div class="health-title"><span class="level">BOSS</span><span>RỒNG GIÀ</span></div><div class="health-track" role="progressbar" id="dragon-health-meter" aria-label="Máu rồng" aria-valuemin="0" aria-valuemax="600" aria-valuenow="600"><div id="dragon-hp-bar"></div></div><p><span>HP</span><b id="dragon-hp-text">600 / 600</b></p></div>
+          </div>
+
+          <div class="fighter hero-fighter" id="hero-box"><div class="actor-shadow"></div><img src="anhhung.svg" class="character" alt="Hiệp sĩ áo choàng xanh cầm kiếm và khiên" width="240" height="340"><div class="fighter-caption"><span id="hero-caption">Nguyễn Quang Đức</span><small>NGƯỜI THÁCH ĐẤU</small></div></div>
+          <div class="fighter dragon-fighter" id="dragon-box"><div class="actor-shadow"></div><img src="rong.svg" class="character" alt="Rồng có sừng và đôi cánh lớn đang đối mặt với hiệp sĩ" width="440" height="330"><div class="fighter-caption"><span>Rồng Già</span><small>KẺ CANH GIỮ HẺM NÚI</small></div></div>
+          <div id="projectile" aria-hidden="true"></div><div class="sword-trail" id="sword-trail" aria-hidden="true"></div>
+          <canvas id="particles" aria-hidden="true"></canvas><div id="float-layer" aria-hidden="true"></div>
+          <div class="arena-status" id="arena-status" role="status">Chuẩn bị nhân vật để bước vào trận đấu.</div>
+          <div class="result-overlay" id="result-overlay" hidden><p class="eyebrow" id="result-kicker"></p><h2 id="result-title"></h2><p id="result-description"></p><button class="button primary" id="play-again" type="button">Chơi lại trận đấu ↗</button><button class="button quiet" id="view-result" type="button" style="margin-top:10px">Xem lại trận đấu</button></div>
+        </div>
+
+        <div class="combat-controls"><button class="button primary" id="btn-start" type="button">⚔ Chuẩn bị nhân vật</button><button class="button secondary" id="btn-turn" type="button" disabled>Đánh một lượt <span>→</span></button><button class="button quiet" id="btn-auto" type="button" disabled aria-pressed="false">▷ Tự động</button></div>
+        <div class="stats-strip"><div><span>SỨC MẠNH</span><b id="stat-strength">—</b></div><div><span>NÉ ĐÒN</span><b id="stat-agility">—</b></div><div><span>CHÍ MẠNG</span><b id="stat-intel">—</b></div><div><span>KINH NGHIỆM</span><b id="stat-xp">—</b></div></div>
+      </section>
+
+      <aside class="journal"><div class="journal-heading"><span class="eyebrow">DIỄN BIẾN TRẬN ĐẤU</span><span class="live-dot" aria-hidden="true"></span></div><h2>Nhật ký chiến đấu</h2><p class="journal-intro">Đòn đánh, né tránh và những khoảnh khắc quyết định.</p><ol id="combat-log" aria-label="Lịch sử các lượt chiến đấu"><li class="log-intro">Đấu trường đã sẵn sàng. Hãy tạo nhân vật của bạn.</li></ol><div class="journal-footer"><span class="key-dot gold"></span> Anh hùng <span class="key-dot red"></span> Rồng Già</div></aside>
+    </div>
+
+    <section class="how-to"><div><p class="eyebrow">LUẬT ĐẤU</p><h2>Đọc trận đấu, hiểu từng lượt.</h2></div><div class="rules"><p><b>01 / Ra đòn</b>Anh hùng đánh trước. Nếu rồng còn máu, rồng phản công.</p><p><b>02 / Né và chí mạng</b>Nhanh nhẹn quyết định khả năng né. Chí mạng gây thêm 200% sát thương.</p><p><b>03 / Phân thắng bại</b>Một bên hết máu thì trận đấu dừng. Thắng rồng: cấp 6, cộng 600 XP.</p></div></section>
+    <footer class="footer"><span>Nguyễn Quang Đức · 31241026319</span><a href="../anhhung.html">Mở bài JavaScript cơ bản ↗</a><span>HTML · CSS · JavaScript</span></footer>
+  </main>
+
+  <dialog id="setup-dialog" aria-labelledby="setup-title"><form id="setup-form"><button type="button" id="close-setup" class="close-dialog" aria-label="Đóng">×</button><p class="eyebrow">TRƯỚC GIỜ XUẤT TRẬN</p><h2 id="setup-title">Chọn con đường của bạn.</h2><p class="setup-intro">Nhập lại họ tên để nhận thêm 5 điểm trí tuệ, rồi chọn một phân lớp.</p><label class="field-label" for="player-name">Họ và tên</label><input id="player-name" name="playerName" type="text" maxlength="80" placeholder="Nguyễn Quang Đức" autocomplete="off" required><fieldset><legend>Phân lớp anh hùng</legend><label class="class-option"><input type="radio" name="heroClass" value="a" checked><span><b>Chiến binh</b><small>+15 sức mạnh · −10 né · −5 trí tuệ</small></span><span>⚔</span></label><label class="class-option"><input type="radio" name="heroClass" value="b"><span><b>Sát thủ</b><small>−15 sức mạnh · +10 né · +5 trí tuệ</small></span><span>◇</span></label><label class="class-option"><input type="radio" name="heroClass" value="c"><span><b>Thợ săn</b><small>−15 sức mạnh · +15 trí tuệ</small></span><span>⌁</span></label></fieldset><p class="setup-note">Mỗi lần chơi dùng xác suất ngẫu nhiên. Không có phân lớp nào được bảo đảm chiến thắng.</p><button class="button primary" type="submit">Vào đấu trường →</button></form></dialog>
+</body>
+</html>
