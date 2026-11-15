@@ -1,0 +1,356 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bản giải thích JavaScript Labs | Nguyễn Quang Đức</title><link rel="stylesheet" href="css/style.css"></head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">QUANG ĐỨC <span>/ JavaScript</span></a><nav aria-label="Điều hướng"><a href="Lab08/">Lab 08</a><a href="Lab09/">Lab 09</a><a href="Lab10/">Lab 10</a><a href="huong-dan.html">Bản giải thích</a></nav></div></header><main class="wrap study-layout" id="top"><section class="hero"><p class="eyebrow">Bản học riêng</p><h1>Đọc mã và tự đối chiếu</h1><p class="lead">Mở bài thực hành ở một tab và bản này ở tab khác. Với mỗi bài: đọc mục tiêu, dự đoán kết quả, thử thao tác, rồi mở mã nguồn để giải thích.</p><p>Bản này giúp học lại, không thay cho việc tự chạy bài. Phần giới thiệu và tự đánh giá trên trang chủ là bản gợi ý, cần sửa theo trải nghiệm thực tế của bạn trước khi nộp.</p><nav><a href="#e8-1">Lab 08</a><a href="#e9-1">Lab 09</a><a href="#e10-1">Lab 10</a></nav></section><section class="section" id="e8-1"><p class="eyebrow">Lab 08</p><h2>8.1 Enabling and Disabling JavaScript</h2><p>Trình duyệt chỉ chạy phần script khi JavaScript được phép. Thẻ noscript là HTML dự phòng khi JavaScript bị tắt. Trang kiểm tra được tạo trong bài để thay URL cũ của giáo trình không truy cập được.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise01.html">Lab08/exercise01.html</a> và <code>Lab08/js/exercise01.js</code>.</p><pre class="study-code">document.getElementById(&#x27;js-state&#x27;).textContent = &#x27;You have JavaScript enabled — JavaScript đang bật.&#x27;;
+</pre><p><strong>Tự thử:</strong> Mở trang bình thường; sau đó dùng cài đặt JavaScript của trình duyệt hoặc DevTools để tắt JavaScript cho trang và tải lại. Bật lại sau khi thử.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-2"><p class="eyebrow">Lab 08</p><h2>8.2 Embedded JavaScript</h2><p>Script nhúng nằm giữa thẻ script trong HTML. alert tạm dừng trang cho đến khi người dùng đóng hộp thoại.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise02.html">Lab08/exercise02.html</a> và <code>Lab08/exercise02.html</code>.</p><pre class="study-code">&lt;script&gt;
+  alert(&quot;Hello World!&quot;);
+&lt;/script&gt;</pre><p><strong>Tự thử:</strong> Tải lại trang: hộp thoại Hello World! xuất hiện trước khi tiếp tục xem các khung DIV.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-3"><p class="eyebrow">Lab 08</p><h2>8.3 External JavaScript</h2><p>Thẻ script có src nạp mã từ file ngoài. count bắt đầu bằng 1; count++ tăng thành 2. Biến output giữ chuỗi HTML. Không gọi document.write sau khi trang đã tải vì có thể ghi đè trang.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise03.html">Lab08/exercise03.html</a> và <code>Lab08/js/exercise03.js</code>.</p><pre class="study-code">// document.write chỉ được gọi khi HTML đang được phân tích, theo bài Lab 08.
+document.write(&#x27;this text was written from JS&#x27;);
+var count = 1;
+document.write(&#x27; Count = &#x27; + count);
+count++;
+var output = &#x27;&lt;br&gt;Count = &#x27; + count;
+document.write(output);
+</pre><p><strong>Tự thử:</strong> Quan sát Count = 1 và Count = 2. Mở file js/exercise03.js để đối chiếu với kết quả.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-4"><p class="eyebrow">Lab 08</p><h2>8.4 Using noscript</h2><p>Nội dung trong noscript không cần JavaScript để hiển thị. Bài này kế thừa cách nạp file ngoài của Exercise 8.3.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise04.html">Lab08/exercise04.html</a> và <code>Lab08/js/exercise04.js</code>.</p><pre class="study-code">document.write(&#x27;&lt;p&gt;JavaScript đang bật: script ngoài hoạt động.&lt;/p&gt;&#x27;);
+</pre><p><strong>Tự thử:</strong> Thử bật/tắt JavaScript rồi tải lại: khi tắt, hiện dòng tiếng Anh trong noscript thay cho thông báo do script tạo.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-5"><p class="eyebrow">Lab 08</p><h2>8.5 Using the Browser Console</h2><p>Console hiển thị thông báo do console.log/warn/error tạo và lỗi thực thi. doccumment không phải biến có sẵn nên gây ReferenceError; document là tên đúng. Có thể nhập count, output, temp trực tiếp trong Console.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise05.html">Lab08/exercise05.html</a> và <code>Lab08/js/exercise05.js</code>.</p><pre class="study-code">var count = 1;
+count++;
+var output = &#x27;&lt;br&gt;Count = &#x27; + count;
+var temp = count * 7;
+console.log(&#x27;script within the &lt;head&gt; element&#x27;);
+console.warn(&#x27;oh no this is a warning — thông báo chủ động của Exercise 8.5&#x27;);
+console.error(&#x27;panic!! error!! — thông báo minh họa console.error, không phải lỗi phát sinh&#x27;);
+document.getElementById(&#x27;console-state&#x27;).textContent = &#x27;count = &#x27; + count + &#x27;\noutput = &#x27; + output + &#x27;\ntemp = &#x27; + temp;
+window.addEventListener(&#x27;error&#x27;, function (event) {
+  document.getElementById(&#x27;console-state&#x27;).textContent = event.message;
+});
+document.getElementById(&#x27;make-error&#x27;).addEventListener(&#x27;click&#x27;, function () {
+  doccumment.write(&#x27;this text was written from JS&#x27;); // Lỗi có chủ đích để học Console.
+});
+document.getElementById(&#x27;fix-error&#x27;).addEventListener(&#x27;click&#x27;, function () {
+  console.log(&#x27;document được viết đúng&#x27;);
+  document.getElementById(&#x27;console-state&#x27;).textContent = &#x27;Đã sửa doccumment thành document; count = &#x27; + count + &#x27;, temp = &#x27; + temp;
+});
+</pre><p><strong>Tự thử:</strong> Mở Console, nhập count (2), output và temp (14). Bấm Tạo lỗi để thấy ReferenceError, rồi bấm Chạy dòng đã sửa. Lỗi minh họa được cô lập khỏi bản chạy bình thường.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-6"><p class="eyebrow">Lab 08</p><h2>8.6 Built in JavaScript Objects</h2><p>String object có kiểu object, còn chuỗi viết trong dấu nháy có kiểu string. Hai object khác nhau không bằng nhau chỉ vì cùng nội dung. === so sánh cả kiểu và giá trị; == có thể chuyển kiểu. Math.random nằm trong [0,1), nên mỗi lần chạy có thể khác.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise06.html">Lab08/exercise06.html</a> và <code>Lab08/js/exercise06.js</code>.</p><pre class="study-code">var stringOne = new String(&#x27;Test&#x27;);
+var stringTwo = &#x27;Test&#x27;;
+var stringThree = &#x27;Test&#x27;;
+var stringFour = new String(&#x27;Test&#x27;);
+document.write(&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Biểu thức&lt;/th&gt;&lt;th&gt;Kết quả&lt;/th&gt;&lt;/tr&gt;&#x27;);
+var comparisons = [
+ [&#x27;typeof stringOne&#x27;, typeof stringOne], [&#x27;typeof stringThree&#x27;, typeof stringThree],
+ [&#x27;stringOne == stringTwo&#x27;, stringOne == stringTwo], [&#x27;stringOne == stringFour&#x27;, stringOne == stringFour],
+ [&#x27;stringOne === stringTwo&#x27;, stringOne === stringTwo], [&#x27;stringTwo === stringThree&#x27;, stringTwo === stringThree],
+ [&#x27;stringTwo === stringFour&#x27;, stringTwo === stringFour]
+];
+for (var i = 0; i &lt; comparisons.length; i++) document.write(&#x27;&lt;tr&gt;&lt;td&gt;&#x27; + comparisons[i][0] + &#x27;&lt;/td&gt;&lt;td&gt;&#x27; + comparisons[i][1] + &#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;);
+document.write(&#x27;&lt;/table&gt;&#x27;);
+var dateOne = new Date();
+document.write(&#x27;&lt;p&gt;Date: &#x27; + dateOne.toString() + &#x27;&lt;/p&gt;&#x27;);
+document.write(&#x27;&lt;p&gt;Math.PI = &#x27; + Math.PI + &#x27;; Math.sqrt(4) = &#x27; + Math.sqrt(4) + &#x27;; Math.random() = &#x27; + Math.random() + &#x27;&lt;/p&gt;&#x27;);
+</pre><p><strong>Tự thử:</strong> Đọc bảng so sánh và tải lại để quan sát Date/Math.random thay đổi, trong khi sqrt(4) luôn bằng 2.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-7"><p class="eyebrow">Lab 08</p><h2>8.7 Arrays</h2><p>push thêm cuối mảng, unshift thêm đầu mảng. Vòng lặp ngoài tạo hàng, vòng lặp trong tạo bảy cột. Chỉ in ngày từ 1 đến 30, các ô cuối để trống. Các tên dài hơn ba ký tự được nhấn mạnh bằng em.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise07.html">Lab08/exercise07.html</a> và <code>Lab08/js/exercise07.js</code>.</p><pre class="study-code">var daysOfWeek = new Array(&#x27;Mon&#x27;, &#x27;Tues&#x27;, &#x27;Wed&#x27;, &#x27;Thur&#x27;, &#x27;Fri&#x27;);
+daysOfWeek.push(&#x27;Sat&#x27;);
+daysOfWeek.unshift(&#x27;Sun&#x27;);
+document.write(&#x27;&lt;table class=&quot;calendar&quot;&gt;&lt;thead&gt;&lt;tr&gt;&#x27;);
+for (var i = 0; i &lt; daysOfWeek.length; i++) {
+  var day = daysOfWeek[i].length &lt; 4 ? daysOfWeek[i] : &#x27;&lt;em&gt;&#x27; + daysOfWeek[i] + &#x27;&lt;/em&gt;&#x27;;
+  document.write(&#x27;&lt;th scope=&quot;col&quot;&gt;&#x27; + day + &#x27;&lt;/th&gt;&#x27;);
+}
+document.write(&#x27;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&#x27;);
+for (var row = 0; row &lt; 5; row++) {
+  document.write(&#x27;&lt;tr&gt;&#x27;);
+  for (var col = 0; col &lt; 7; col++) {
+    var date = row * 7 + col + 1;
+    document.write(&#x27;&lt;td&gt;&#x27; + (date &lt;= 30 ? date : &#x27;&#x27;) + &#x27;&lt;/td&gt;&#x27;);
+  }
+  document.write(&#x27;&lt;/tr&gt;&#x27;);
+}
+document.write(&#x27;&lt;/tbody&gt;&lt;/table&gt;&#x27;);
+</pre><p><strong>Tự thử:</strong> Kiểm tra có bảy cột Sun đến Sat, ngày 1 nằm ở Chủ nhật và ngày 30 ở thứ Hai, không xuất hiện 31.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-8"><p class="eyebrow">Lab 08</p><h2>8.8 JavaScript Functions</h2><p>outputBox nhận num và trả về một chuỗi HTML; vòng lặp gọi hàm năm lần. box có var trong hàm nên là biến cục bộ. boxClass khai báo ngoài hàm để minh họa global. Bản hoàn thiện giữ khai báo var, không để phát sinh biến toàn cục ngoài ý muốn.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise08.html">Lab08/exercise08.html</a> và <code>Lab08/js/exercise08.js</code>.</p><pre class="study-code">var boxClass = &#x27;movingDiv&#x27;; // Biến toàn cục để minh họa đúng nội dung Lab.
+function outputBox(num) {
+  var box = &#x27;&lt;div class=&quot;&#x27; + boxClass + &#x27;&quot; id=&quot;div&#x27; + num + &#x27;&quot;&gt;This is div &#x27; + num + &#x27;&lt;/div&gt;&#x27;;
+  return box;
+}
+for (var count = 1; count &lt; 6; count++) document.write(outputBox(count));
+try { console.log(box); } catch (error) {
+  document.write(&#x27;&lt;p class=&quot;note&quot;&gt;&#x27; + error.name + &#x27;: box chỉ tồn tại trong outputBox, không truy cập được từ ngoài.&lt;/p&gt;&#x27;);
+}
+console.log(&#x27;typeof window.box =&#x27;, typeof window.box);
+</pre><p><strong>Tự thử:</strong> Kiểm tra có năm khung ID div1–div5; Console ghi typeof window.box là undefined. Đọc thông báo phạm vi biến.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-9"><p class="eyebrow">Lab 08</p><h2>8.9 Functions as Objects</h2><p>Tham số tax giữ một function. calculateTax gọi tax() để lấy tỷ lệ. Hàm vô danh được truyền ngay khi gọi, nên có thể thay quy tắc mà không viết lại phép nhân. toFixed(2) trả chuỗi với hai chữ số thập phân. Ví dụ thuế theo đúng giáo trình, không phải quy tắc thuế của cửa hàng nhóm.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise09.html">Lab08/exercise09.html</a> và <code>Lab08/js/exercise09.js</code>.</p><pre class="study-code">var isCanadian = true;
+function calculateTax(amount, tax) { return amount * tax(); }
+function calculateTotal(price, quantity) {
+  var amount = price * quantity;
+  return amount + calculateTax(amount, function () { return isCanadian ? 0.05 : 0.0; });
+}
+document.write(&#x27;&lt;p&gt;Price = $15.00; quantity = 2; thuế = 5%&lt;/p&gt;&#x27;);
+document.write(&#x27;&lt;p id=&quot;tax-total&quot;&gt;Total = $&#x27; + calculateTotal(15, 2).toFixed(2) + &#x27;&lt;/p&gt;&#x27;);
+isCanadian = false;
+document.write(&#x27;&lt;p&gt;Không áp dụng thuế: $&#x27; + calculateTotal(15, 2).toFixed(2) + &#x27;&lt;/p&gt;&#x27;);
+isCanadian = true;
+</pre><p><strong>Tự thử:</strong> Kiểm tra 15 × 2 = 30; cộng thuế 5% thành 31.50, không thuế là 30.00.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-10"><p class="eyebrow">Lab 08</p><h2>8.10 Creating JavaScript Objects</h2><p>Object gom dữ liệu và phương thức. this chỉ đối tượng đang gọi phương thức. total không có ngoặc là tham chiếu hàm, total() mới thực thi hàm. new Order tạo hai đối tượng độc lập. Dùng tên constructor viết hoa để dễ phân biệt với một đối tượng.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise10.html">Lab08/exercise10.html</a> và <code>Lab08/js/exercise10.js</code>.</p><pre class="study-code">var literalOrder = { product: &#x27;Self Portrait in a Straw Hat&#x27;, price: 15, quantity: 2, total: function () { return this.price * this.quantity; } };
+console.log(&#x27;Dot:&#x27;, literalOrder.product, &#x27;Bracket:&#x27;, literalOrder[&#x27;product&#x27;]);
+console.log(&#x27;order.total là hàm:&#x27;, typeof literalOrder.total, &#x27;order.total() là kết quả:&#x27;, literalOrder.total());
+function Order(product, price, quantity) {
+  this.product = product; this.price = price; this.quantity = quantity;
+  this.total = function () { return this.price * this.quantity; };
+  this.output = function () {
+    document.write(&#x27;&lt;article class=&quot;box&quot;&gt;&lt;h3&gt;&#x27; + this.product + &#x27;&lt;/h3&gt;&lt;p&gt;Price = $&#x27; + this.price.toFixed(2) + &#x27;; Quantity = &#x27; + this.quantity + &#x27;&lt;/p&gt;&lt;strong&gt;Total = $&#x27; + this.total().toFixed(2) + &#x27;&lt;/strong&gt;&lt;/article&gt;&#x27;);
+  };
+}
+var example1 = new Order(&#x27;Self Portrait in a Straw Hat&#x27;, 15, 2);
+var example2 = new Order(&#x27;Untitled #23&#x27;, 10, 4);
+document.write(&#x27;&lt;div class=&quot;facts&quot;&gt;&#x27;); example1.output(); example2.output(); document.write(&#x27;&lt;/div&gt;&#x27;);
+</pre><p><strong>Tự thử:</strong> Kiểm tra hai đơn có tổng lần lượt 30.00 và 40.00; xem Console để phân biệt thuộc tính hàm với kết quả gọi hàm.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e8-11"><p class="eyebrow">Lab 08</p><h2>8.11 Arrays of Objects</h2><p>countries là mảng; mỗi phần tử là một Country. Vòng for duyệt các quốc gia; for…in duyệt tên thuộc tính của từng quốc gia. c[propertyName] dùng nội dung biến làm khóa. Số dân là dữ liệu bài tập gốc, không phải thống kê cập nhật.</p><p><strong>Đối chiếu file:</strong> <a href="Lab08/exercise11.html">Lab08/exercise11.html</a> và <code>Lab08/js/exercise11.js</code>.</p><pre class="study-code">function Country(name, iso, capital, population) {
+  this.name = name; this.iso = iso; this.capital = capital; this.population = population;
+}
+var countries = [new Country(&#x27;Bahamas&#x27;, &#x27;BS&#x27;, &#x27;Nassau&#x27;, 301790), new Country(&#x27;Canada&#x27;, &#x27;CA&#x27;, &#x27;Ottawa&#x27;, 33679000), new Country(&#x27;Germany&#x27;, &#x27;DE&#x27;, &#x27;Berlin&#x27;, 81802257)];
+countries.push(new Country(&#x27;Spain&#x27;, &#x27;ES&#x27;, &#x27;Madrid&#x27;, 46505963));
+countries.push(new Country(&#x27;United Kingdom&#x27;, &#x27;GB&#x27;, &#x27;London&#x27;, 62348447));
+document.write(&#x27;&lt;div class=&quot;facts&quot;&gt;&#x27;);
+for (var i = 0; i &lt; countries.length; i++) {
+  var c = countries[i];
+  document.write(&#x27;&lt;article class=&quot;box&quot;&gt;&lt;img class=&quot;boxImg&quot; alt=&quot;Quốc kỳ &#x27; + c.name + &#x27;&quot; src=&quot;flags/&#x27; + c.iso + &#x27;.png&quot;&gt;&#x27;);
+  for (var propertyName in c) {
+    if (Object.prototype.hasOwnProperty.call(c, propertyName)) document.write(&#x27;&lt;p&gt;&lt;strong&gt;&#x27; + propertyName + &#x27;:&lt;/strong&gt; &#x27; + c[propertyName] + &#x27;&lt;/p&gt;&#x27;);
+  }
+  document.write(&#x27;&lt;/article&gt;&#x27;);
+}
+document.write(&#x27;&lt;/div&gt;&#x27;);
+</pre><p><strong>Tự thử:</strong> Kiểm tra đủ năm quốc gia, mỗi quốc gia có name, iso, capital, population và lá cờ đúng mã ISO.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-1"><p class="eyebrow">Lab 09</p><h2>9.1 Basic DOM Selection</h2><p>getElementById trả một phần tử. querySelector lấy phần tử đầu tiên, querySelectorAll trả NodeList nhiều phần tử. innerHTML chứa markup còn innerText lấy chữ hiển thị. getElementsByTagName/ClassName trả HTMLCollection, không phải Array thông thường. Bài giữ nút ẩn/hiện để dễ đối chiếu setAttribute.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise01.html">Lab09/exercise01.html</a> và <code>Lab09/js/exercise01.js</code>.</p><pre class="study-code">var msg = document.getElementById(&#x27;msgArea&#x27;);
+document.getElementById(&#x27;pageTitle&#x27;).innerHTML = &#x27;Even newer title&#x27;;
+var results = [];
+results.push(&#x27;innerHTML: &#x27; + document.getElementById(&#x27;first&#x27;).innerHTML);
+results.push(&#x27;innerText: &#x27; + document.getElementById(&#x27;first&#x27;).innerText);
+results.push(&#x27;class: &#x27; + msg.getAttribute(&#x27;class&#x27;));
+var elem = document.getElementsByTagName(&#x27;span&#x27;);
+results.push(&#x27;Số span: &#x27; + elem.length);
+var counts = document.getElementsByClassName(&#x27;count-number&#x27;);
+for (var i = 0; i &lt; counts.length; i++) results.push(&#x27;count-number: &#x27; + counts[i].innerText);
+var ps = document.querySelectorAll(&#x27;#first p&#x27;);
+for (var j = 0; j &lt; ps.length; j++) results.push(&#x27;querySelectorAll: &#x27; + ps[j].innerHTML);
+msg.value = results.join(&#x27;\n&#x27;);
+document.querySelector(&#x27;#first p&#x27;).style.color = &#x27;#1757ce&#x27;;
+document.getElementById(&#x27;features&#x27;).style.backgroundColor = &#x27;#ccebd7&#x27;;
+document.getElementById(&#x27;show-message&#x27;).addEventListener(&#x27;click&#x27;, function () {
+  msg.setAttribute(&#x27;class&#x27;, msg.classList.contains(&#x27;hidden&#x27;) ? &#x27;form-control&#x27; : &#x27;hidden&#x27;);
+});
+</pre><p><strong>Tự thử:</strong> Quan sát tiêu đề mới và nền vùng số liệu. Đọc nội dung textarea; bấm ẩn/hiện để kiểm tra thay class.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-2"><p class="eyebrow">Lab 09</p><h2>9.2 DOM Family Relations</h2><p>childNodes có cả khoảng trắng dưới dạng text node (nodeType 3). children/firstElementChild chỉ lấy phần tử. Chỉ đổi style khi nodeType bằng 1 để không truy cập style của text node. firstChild.nextSibling và parentNode cho thấy quan hệ cùng cấp và cha.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise02.html">Lab09/exercise02.html</a> và <code>Lab09/js/exercise02.js</code>.</p><pre class="study-code">var first = document.getElementById(&#x27;first&#x27;);
+console.log(&#x27;firstChild:&#x27;, first.firstChild, &#x27;firstElementChild:&#x27;, first.firstElementChild);
+console.log(&#x27;firstChild.nextSibling:&#x27;, first.firstChild.nextSibling, &#x27;parentNode:&#x27;, first.parentNode);
+var stories = document.getElementById(&#x27;stories&#x27;);
+var lines = [];
+for (var i = 0; i &lt; stories.childNodes.length; i++) {
+  var node = stories.childNodes[i];
+  lines.push(&#x27;child &#x27; + i + &#x27; = &#x27; + node.nodeName + &#x27;; nodeType=&#x27; + node.nodeType);
+  console.log(lines[lines.length - 1]);
+  if (node.nodeType === Node.ELEMENT_NODE) node.style.backgroundColor = &#x27;#fff0c7&#x27;;
+}
+document.getElementById(&#x27;family-result&#x27;).textContent = lines.join(&#x27;\n&#x27;);
+</pre><p><strong>Tự thử:</strong> Xem các khối bài viết đổi nền. Mở Console để so sánh firstChild với firstElementChild; đọc danh sách nodeType.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-3"><p class="eyebrow">Lab 09</p><h2>9.3 Modifying the DOM</h2><p>createElement tạo node chưa gắn vào trang. appendChild mới đưa node vào cây DOM. removeChild nhận đúng node con cần xóa; các mục khác không bị mất.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise03.html">Lab09/exercise03.html</a> và <code>Lab09/js/exercise03.js</code>.</p><pre class="study-code">var first = document.getElementById(&#x27;first&#x27;);
+var text = document.createTextNode(&#x27;this is programmatically created&#x27;);
+var p = document.createElement(&#x27;p&#x27;);
+p.appendChild(text);
+first.appendChild(p);
+var icons = document.getElementById(&#x27;iconList&#x27;);
+icons.removeChild(document.getElementById(&#x27;deleteThisOne&#x27;));
+</pre><p><strong>Tự thử:</strong> Kiểm tra xuất hiện đoạn this is programmatically created và danh sách chỉ còn hai mục giữ lại. Dùng Inspect để xem DOM sau thay đổi.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-4"><p class="eyebrow">Lab 09</p><h2>9.4 Simple Event Handling</h2><p>addEventListener nhận tên sự kiện và hàm xử lý. Click đổi opacity rồi mới display:none sau 1 giây. clearTimeout tránh lần bấm cũ ẩn lại nội dung khi người dùng bấm nhanh. mouseover thêm grayscale, mouseout phục hồi.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise04.html">Lab09/exercise04.html</a> và <code>Lab09/js/exercise04.js</code>.</p><pre class="study-code">var btn = document.getElementById(&#x27;testButton&#x27;);
+var content = document.getElementById(&#x27;content&#x27;);
+var pendingTimer;
+function simpleHandler(event) {
+  clearTimeout(pendingTimer);
+  if (btn.textContent === &#x27;Hide&#x27;) {
+    btn.textContent = &#x27;Show&#x27;; content.className = &#x27;makeItDisappear&#x27;;
+    pendingTimer = setTimeout(function () { content.style.display = &#x27;none&#x27;; }, 1000);
+  } else {
+    btn.textContent = &#x27;Hide&#x27;; content.style.display = &#x27;block&#x27;;
+    pendingTimer = setTimeout(function () { content.className = &#x27;makeItNormal&#x27;; }, 50);
+  }
+}
+btn.addEventListener(&#x27;click&#x27;, simpleHandler);
+var img = document.getElementById(&#x27;mainImage&#x27;);
+img.addEventListener(&#x27;mouseover&#x27;, function () { img.className = &#x27;makeItGray&#x27;; });
+img.addEventListener(&#x27;mouseout&#x27;, function () { img.className = &#x27;makeItNormal&#x27;; });
+</pre><p><strong>Tự thử:</strong> Bấm Hide/Show, thử bấm nhanh hai lần; rê chuột lên ảnh để thấy ảnh xám và rời chuột để phục hồi.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-5"><p class="eyebrow">Lab 09</p><h2>9.5 Responding to Load Events</h2><p>Nếu script ở head đọc div1 ngay thì phần tử chưa tồn tại. load chạy sau khi trang và tài nguyên đã tải. DOMContentLoaded thường phù hợp nếu chỉ cần DOM; bài này dùng load đúng đề.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise05.html">Lab09/exercise05.html</a> và <code>Lab09/js/exercise05.js</code>.</p><pre class="study-code">// File được nạp ở head có chủ đích: chưa được đọc div1 ngay lúc này.
+console.log(&#x27;Trước load, div1 =&#x27;, document.getElementById(&#x27;div1&#x27;));
+window.addEventListener(&#x27;load&#x27;, function () {
+  var divToGet = document.getElementById(&#x27;div1&#x27;);
+  document.getElementById(&#x27;load-result&#x27;).textContent = &#x27;load đã chạy: &#x27; + divToGet.innerHTML;
+  alert(divToGet.innerHTML);
+});
+</pre><p><strong>Tự thử:</strong> Tải lại: thông báo This is div 1 xuất hiện; Console trước load ghi null. Đóng thông báo để xem trang.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-6"><p class="eyebrow">Lab 09</p><h2>9.6 Debugging Events</h2><p>Breakpoint tạm dừng tại dòng mã thật, khác với console.log chỉ in ra. Trong Sources, đặt breakpoint tại targetId rồi xem e, e.target và Scope; F10 chạy từng bước, F8 tiếp tục. Tùy chọn debugger là một cách chủ động dừng mà không luôn làm gián đoạn trang.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise06.html">Lab09/exercise06.html</a> và <code>Lab09/js/exercise06.js</code>.</p><pre class="study-code">window.addEventListener(&#x27;load&#x27;, function () {
+  var divs = document.querySelectorAll(&#x27;.movingDiv&#x27;);
+  for (var i = 0; i &lt; divs.length; i++) {
+    divs[i].addEventListener(&#x27;mouseover&#x27;, function (e) {
+      var targetId = e.target.id; // Đặt breakpoint ở dòng này trong DevTools Sources.
+      if (document.getElementById(&#x27;pause-debug&#x27;).checked) { debugger; }
+      console.log(&#x27;triggered by &#x27; + targetId, e);
+      document.getElementById(&#x27;event-result&#x27;).textContent = &#x27;triggered by &#x27; + targetId + &#x27;; event.type = &#x27; + e.type;
+    });
+  }
+});
+</pre><p><strong>Tự thử:</strong> Mở F12 → Sources → js/exercise06.js, đặt breakpoint tại targetId rồi rê chuột lên div3. Kiểm tra e.target.id = div3, sau đó tiếp tục chạy.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-7"><p class="eyebrow">Lab 09</p><h2>9.7 Working with Forms</h2><p>focus xảy ra khi ô nhận con trỏ; blur xảy ra khi rời ô. Cùng một hàm dùng e.type để chọn màu và e.target để biết ô nào đổi nền. Form chỉ minh họa sự kiện, không lưu hoặc gửi mật khẩu.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise07.html">Lab09/exercise07.html</a> và <code>Lab09/js/exercise07.js</code>.</p><pre class="study-code">function setBackground(e) {
+  e.target.style.backgroundColor = e.type === &#x27;focus&#x27; ? &#x27;#FFE393&#x27; : &#x27;white&#x27;;
+}
+window.addEventListener(&#x27;load&#x27;, function () {
+  var fields = document.querySelectorAll(&#x27;input[type=text], input[type=password]&#x27;);
+  for (var i = 0; i &lt; fields.length; i++) {
+    fields[i].addEventListener(&#x27;focus&#x27;, setBackground);
+    fields[i].addEventListener(&#x27;blur&#x27;, setBackground);
+  }
+  document.getElementById(&#x27;sampleForm&#x27;).addEventListener(&#x27;submit&#x27;, function (e) {
+    e.preventDefault(); // Bài tĩnh không gửi mật khẩu lên URL hoặc máy chủ.
+    document.getElementById(&#x27;form-result&#x27;).textContent = &#x27;Đã thử form; không gửi dữ liệu cá nhân trong bài thực hành.&#x27;;
+  });
+});
+</pre><p><strong>Tự thử:</strong> Dùng Tab lần lượt qua các ô: ô đang focus vàng, ô vừa rời về trắng.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e9-8"><p class="eyebrow">Lab 09</p><h2>9.8 Form Validation</h2><p>submit là thời điểm kiểm tra dữ liệu. preventDefault chặn hành động gửi mặc định. trim giúp coi chuỗi toàn khoảng trắng là rỗng. Lỗi được tạo bằng textContent để không diễn giải nội dung nhập thành HTML. Bài kiểm tra trường rỗng theo đề, chưa phải xác thực tài khoản đầy đủ ở backend.</p><p><strong>Đối chiếu file:</strong> <a href="Lab09/exercise08.html">Lab09/exercise08.html</a> và <code>Lab09/js/exercise08.js</code>.</p><pre class="study-code">function checkForEmptyFields(e) {
+  e.preventDefault(); // Luôn giữ bài minh họa trên trang, không đưa dữ liệu vào query string.
+  var errorArea = document.getElementById(&#x27;errors&#x27;);
+  errorArea.className = &#x27;hidden&#x27;; errorArea.textContent = &#x27;&#x27;;
+  var fields = document.querySelectorAll(&#x27;#sampleForm input[type=text], #sampleForm input[type=password]&#x27;);
+  var fieldList = [];
+  for (var i = 0; i &lt; fields.length; i++) {
+    var empty = fields[i].value.trim() === &#x27;&#x27;;
+    fields[i].classList.toggle(&#x27;invalid&#x27;, empty);
+    fields[i].setAttribute(&#x27;aria-invalid&#x27;, String(empty));
+    if (empty) fieldList.push(fields[i]);
+  }
+  document.getElementById(&#x27;form-result&#x27;).textContent = &#x27;&#x27;;
+  if (fieldList.length &gt; 0) {
+    errorArea.textContent = &quot;The following fields can&#x27;t be empty: &quot; + fieldList.map(function (f) { return f.id; }).join(&#x27;, &#x27;);
+    errorArea.className = &#x27;visible&#x27;; fieldList[0].focus();
+  } else {
+    document.getElementById(&#x27;form-result&#x27;).textContent = &#x27;Dữ liệu hợp lệ: các ô đều đã được nhập. Đây là form thực hành, chưa tạo tài khoản.&#x27;;
+  }
+}
+function init() { document.getElementById(&#x27;sampleForm&#x27;).addEventListener(&#x27;submit&#x27;, checkForEmptyFields); }
+window.addEventListener(&#x27;load&#x27;, init);
+</pre><p><strong>Tự thử:</strong> Gửi khi form rỗng, nhập chỉ khoảng trắng, nhập một phần rồi nhập đủ. Kiểm tra thông báo lỗi đổi đúng và không lộ mật khẩu trên URL.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-1"><p class="eyebrow">Lab 10</p><h2>10.1 Set Up jQuery</h2><p>Trang thử CDN qua HTTPS trước. Nếu window.jQuery chưa có thì nạp vendor/jquery-3.1.1.min.js đi kèm bộ đề. Script bài tập phải nằm sau thư viện. $ là tên viết ngắn của hàm jQuery.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise01.html">Lab10/exercise01.html</a> và <code>Lab10/js/exercise01.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#jquery-state&#x27;).text(&#x27;jQuery &#x27; + $.fn.jquery + &#x27; đã được nạp. DOM ready hoạt động.&#x27;);
+});
+</pre><p><strong>Tự thử:</strong> Xem phiên bản jQuery. Trong DevTools Network chặn code.jquery.com rồi tải lại: bản cục bộ vẫn làm trang chạy được.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-2"><p class="eyebrow">Lab 10</p><h2>10.2 Basic Selectors</h2><p>$(selector) trả một tập phần tử. val làm việc với giá trị input/textarea; html đọc/ghi HTML; attr làm việc với thuộc tính. css và addClass áp dụng cho cả tập nên không phải tự lặp qua từng nút.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise02.html">Lab10/exercise02.html</a> và <code>Lab10/js/exercise02.js</code>.</p><pre class="study-code">$(function () {
+  var msg = $(&#x27;#msgArea&#x27;);
+  msg.val(&#x27;here is some new text&#x27;);
+  $(&#x27;#pageTitle&#x27;).html(&#x27;new Title&#x27;);
+  msg.val(&#x27;My class is &#x27; + msg.attr(&#x27;class&#x27;));
+  $(&#x27;button&#x27;).css(&#x27;background-color&#x27;, &#x27;red&#x27;);
+  $(&#x27;body&#x27;).css(&#x27;background-color&#x27;, &#x27;ivory&#x27;);
+  $(&#x27;.center-icons&#x27;).addClass(&#x27;selected&#x27;);
+});
+</pre><p><strong>Tự thử:</strong> Quan sát tiêu đề new Title, textarea ghi class, các nút đỏ và vùng số liệu có class selected.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-3"><p class="eyebrow">Lab 10</p><h2>10.3 Advanced Selectors</h2><p>Bộ chọn giả :password chọn ô mật khẩu. :nth-child(4n) xét vị trí của phần tử trong cha, không phải chọn ô thứ tư trong tập input. :contains phân biệt hoa/thường và xét chữ bên trong phần tử. Ba nút giữ các bước của đề để có thể thử riêng.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise03.html">Lab10/exercise03.html</a> và <code>Lab10/js/exercise03.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#advanced-form&#x27;).on(&#x27;submit&#x27;, function (e) { e.preventDefault(); });
+  $(&#x27;#select-password&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;:password&#x27;).css(&#x27;background-color&#x27;, &#x27;yellow&#x27;);
+    $(&#x27;#selector-result&#x27;).text(&#x27;:password chọn &#x27; + $(&#x27;:password&#x27;).length + &#x27; ô mật khẩu.&#x27;);
+  });
+  $(&#x27;#select-fourth&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;form :nth-child(4n)&#x27;).css(&#x27;background-color&#x27;, &#x27;yellow&#x27;);
+    $(&#x27;#selector-result&#x27;).text(&#x27;:nth-child(4n) đếm vị trí phần tử con trong cha, bắt đầu từ 1.&#x27;);
+  });
+  $(&#x27;#select-word&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;label:contains(&quot;word&quot;)&#x27;).css(&#x27;color&#x27;, &#x27;black&#x27;).css(&#x27;background-color&#x27;, &#x27;#ffe393&#x27;);
+    $(&#x27;#selector-result&#x27;).text(&#x27;:contains(&quot;word&quot;) chọn &#x27; + $(&#x27;label:contains(&quot;word&quot;)&#x27;).length + &#x27; nhãn chứa đúng chuỗi word.&#x27;);
+  });
+});
+</pre><p><strong>Tự thử:</strong> Bấm lần lượt ba nút, quan sát hai ô mật khẩu và hai nhãn Password được chọn đúng.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-4"><p class="eyebrow">Lab 10</p><h2>10.4 jQuery Listeners</h2><p>on gắn bộ xử lý sự kiện, off gỡ bộ xử lý. Chuỗi gọi hàm giúp cấu hình nhiều sự kiện cho cùng tập phần tử. pageX/pageY là tọa độ theo toàn trang. Nút gắn lại giúp thử nhiều lần mà không phải tải trang.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise04.html">Lab10/exercise04.html</a> và <code>Lab10/js/exercise04.js</code>.</p><pre class="study-code">$(function () {
+  function reportMove(e) { $(&#x27;#message&#x27;).text(&#x27;x=&#x27; + e.pageX + &#x27; y=&#x27; + e.pageY); }
+  $(&#x27;.panel&#x27;).on(&#x27;mousemove&#x27;, reportMove)
+    .on(&#x27;mouseleave&#x27;, function () { $(&#x27;#message&#x27;).text(&#x27;goodbye!&#x27;); })
+    .on(&#x27;click&#x27;, function () { $(&#x27;#message&#x27;).text(&#x27;stopped move reporting&#x27;); $(&#x27;.panel&#x27;).off(&#x27;mousemove&#x27;); });
+  $(&#x27;#restart-listener&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;.panel&#x27;).off(&#x27;mousemove&#x27;).on(&#x27;mousemove&#x27;, reportMove); });
+});
+</pre><p><strong>Tự thử:</strong> Di chuyển chuột thấy tọa độ; bấm khung rồi tiếp tục di chuyển, số không đổi; rời khung hiện goodbye; gắn lại để thử tiếp.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-5"><p class="eyebrow">Lab 10</p><h2>10.5 Inserting DOM Elements</h2><p>before/after chèn thành anh em bên ngoài panel, prepend/append chèn thành con ở đầu/cuối panel. appendTo/prependTo/insertBefore diễn đạt từ phía phần tử cần chèn. Bài xóa ảnh thử trước rồi thêm một ảnh mới để kết quả mỗi lần rõ ràng.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise05.html">Lab10/exercise05.html</a> và <code>Lab10/js/exercise05.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#insert-now&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;#insert-zone .inserted&#x27;).remove();
+    var img = $(&#x27;&lt;img&gt;&#x27;).attr({src: &#x27;images/art/thumbs/13030.jpg&#x27;, alt: &#x27;Ảnh được thêm bằng jQuery&#x27;}).addClass(&#x27;inserted&#x27;);
+    var panel = $(&#x27;#insert-zone .panel&#x27;);
+    var method = $(&#x27;#insert-method&#x27;).val();
+    switch (method) {
+      case &#x27;after&#x27;: panel.after(img); break;
+      case &#x27;before&#x27;: panel.before(img); break;
+      case &#x27;append&#x27;: panel.append(img); break;
+      case &#x27;prepend&#x27;: panel.prepend(img); break;
+      case &#x27;appendTo&#x27;: img.appendTo(panel); break;
+      case &#x27;prependTo&#x27;: img.prependTo(panel); break;
+      case &#x27;insertBefore&#x27;: img.insertBefore(panel); break;
+    }
+    $(&#x27;#insert-result&#x27;).text(&#x27;Đã chèn bằng &#x27; + method + &#x27;; phần tử cha của ảnh: &#x27; + img.parent()[0].className);
+  });
+});
+</pre><p><strong>Tự thử:</strong> Chọn lần lượt bảy phương thức rồi bấm Chèn ảnh; dùng Inspect kiểm tra ảnh nằm trong hay ngoài panel.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-6"><p class="eyebrow">Lab 10</p><h2>10.6 Simple jQuery Animation</h2><p>fade thay đổi độ mờ; slide thay đổi vùng hiển thị theo chiều dọc. toggle tự chọn hiện hay ẩn theo trạng thái. Thời gian số được tính bằng mili giây. stop(true,true) ngăn hàng đợi hoạt ảnh kéo dài khi bấm liên tục.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise06.html">Lab10/exercise06.html</a> và <code>Lab10/js/exercise06.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#btnFadeIn&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).fadeIn(1000); });
+  $(&#x27;#btnFadeOut&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).fadeOut(1000); });
+  $(&#x27;#btnFade&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).fadeToggle(500); });
+  $(&#x27;#btnSlideDown&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).slideDown(&#x27;slow&#x27;); });
+  $(&#x27;#btnSlideUp&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).slideUp(&#x27;slow&#x27;); });
+  $(&#x27;#btnSlide&#x27;).on(&#x27;click&#x27;, function () { $(&#x27;figure&#x27;).stop(true, true).slideToggle(2000); });
+});
+</pre><p><strong>Tự thử:</strong> Bấm Fade in rồi Fade out; thử Fade toggle và cả ba nút slide. Kiểm tra mỗi lần ảnh hiện/ẩn đúng.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-7"><p class="eyebrow">Lab 10</p><h2>10.7 More jQuery Animation</h2><p>Đường dẫn small được đổi thành medium để dùng đúng ảnh lớn trong bộ gốc. Preview là DOM thật được tạo và xóa theo sự kiện. text và attr giúp gán nội dung an toàn. Vị trí được chặn theo chiều rộng màn hình để không tràn ngang; có thêm focus/blur cho bàn phím.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise07.html">Lab10/exercise07.html</a> và <code>Lab10/js/exercise07.js</code>.</p><pre class="study-code">$(function () {
+  function movePreview(e) {
+    var x = typeof e.pageX === &#x27;number&#x27; ? e.pageX : $(this).offset().left;
+    var y = typeof e.pageY === &#x27;number&#x27; ? e.pageY : $(this).offset().top;
+    var left = Math.max(8, Math.min(x + 30, window.scrollX + window.innerWidth - 310));
+    $(&#x27;#preview&#x27;).css({top: (y + 15) + &#x27;px&#x27;, left: left + &#x27;px&#x27;});
+  }
+  function removePreview() { $(this).removeClass(&#x27;gray&#x27;); $(&#x27;#preview&#x27;).remove(); }
+  $(&#x27;figure img&#x27;).on(&#x27;mouseover focus&#x27;, function (e) {
+    $(&#x27;#preview&#x27;).remove();
+    var newsrc = $(this).attr(&#x27;src&#x27;).replace(&#x27;small&#x27;, &#x27;medium&#x27;);
+    var preview = $(&#x27;&lt;div id=&quot;preview&quot;&gt;&lt;/div&gt;&#x27;);
+    preview.append($(&#x27;&lt;img&gt;&#x27;).attr({src: newsrc, alt: $(this).attr(&#x27;alt&#x27;)}));
+    preview.append($(&#x27;&lt;p&gt;&#x27;).text($(this).attr(&#x27;alt&#x27;)));
+    $(&#x27;body&#x27;).append(preview); $(this).addClass(&#x27;gray&#x27;);
+    movePreview.call(this, e); preview.fadeIn(1000);
+  }).on(&#x27;mouseleave blur&#x27;, removePreview).on(&#x27;mousemove&#x27;, movePreview);
+});
+</pre><p><strong>Tự thử:</strong> Rê chuột từng ảnh để thấy ảnh xám và preview lớn; di chuyển chuột rồi rời ảnh để preview biến mất. Dùng Tab để thử bằng bàn phím.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-8"><p class="eyebrow">Lab 10</p><h2>10.8 Complex Animations</h2><p>Các animate nối tiếp dùng hàng đợi nên không chạy đồng thời. Khung phải có position để left/top có tác dụng. Ở màn hình rộng giữ mốc left 495 và top 400 theo đề; ở điện thoại giới hạn bằng kích thước vùng để không tràn.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise08.html">Lab10/exercise08.html</a> và <code>Lab10/js/exercise08.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#animate-box&#x27;).on(&#x27;click&#x27;, function () {
+    var stage = $(&#x27;.animation-stage&#x27;);
+    var left = Math.min(495, stage.width() - 200);
+    var top = Math.min(400, stage.height() - 210);
+    $(&#x27;#animation-result&#x27;).text(&#x27;Đang chạy ba hoạt ảnh theo thứ tự…&#x27;);
+    $(&#x27;#box&#x27;).stop(true, false)
+      .animate({left: left + &#x27;px&#x27;, opacity: 1, height: &#x27;50px&#x27;}, 500)
+      .animate({top: top + &#x27;px&#x27;, opacity: .2}, 500)
+      .animate({height: &#x27;200px&#x27;}, 2000, function () { $(&#x27;#animation-result&#x27;).text(&#x27;Đã hoàn thành cả ba hoạt ảnh.&#x27;); });
+  });
+  $(&#x27;#reset-box&#x27;).on(&#x27;click&#x27;, function () {
+    $(&#x27;#box&#x27;).stop(true, true).css({left: 0, top: 0, opacity: .4, height: &#x27;150px&#x27;});
+    $(&#x27;#animation-result&#x27;).text(&#x27;Đã đặt lại.&#x27;);
+  });
+});
+</pre><p><strong>Tự thử:</strong> Bấm Animate: khung di chuyển ngang/đổi độ mờ, di chuyển xuống rồi tăng chiều cao; bấm Đặt lại để chạy lại.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-9"><p class="eyebrow">Lab 10</p><h2>10.9 GET Requests</h2><p>GET gửi yêu cầu bất đồng bộ, không tải lại cả trang. dataType json yêu cầu jQuery phân tích phản hồi JSON. $.each duyệt kết quả rồi tạo li bằng text. File cities.json trong repo là dữ liệu mẫu để minh họa GET; không được mô tả là kết quả lấy từ dịch vụ ngoài.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise09.html">Lab10/exercise09.html</a> và <code>Lab10/js/exercise09.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;#consume&#x27;).on(&#x27;click&#x27;, function () {
+    var url = $(&#x27;#data-source&#x27;).val();
+    $(&#x27;#results&#x27;).empty(); $(&#x27;#request-log&#x27;).text(&#x27;GET &#x27; + url);
+    $(&#x27;#request-state&#x27;).text(&#x27;Đang tải dữ liệu…&#x27;); $(&#x27;#consume&#x27;).prop(&#x27;disabled&#x27;, true);
+    $.get({url: url, dataType: &#x27;json&#x27;, timeout: 7000}, function (data, status) {
+      if (status === &#x27;success&#x27; &amp;&amp; Array.isArray(data)) {
+        var ul = $(&#x27;&lt;ul&gt;&#x27;);
+        $.each(data, function (index, value) { $(&#x27;&lt;li&gt;&#x27;).text(value.name).appendTo(ul); });
+        $(&#x27;#results&#x27;).append(ul);
+        $(&#x27;#request-state&#x27;).text(&#x27;Tải thành công &#x27; + data.length + &#x27; thành phố.&#x27;);
+      }
+    }).fail(function (xhr, status, error) {
+      $(&#x27;#request-state&#x27;).text(&#x27;Không tải được dữ liệu: &#x27; + status + &#x27;; HTTP &#x27; + xhr.status + &#x27;.&#x27;);
+      $(&#x27;#request-log&#x27;).append(&#x27;\nLỗi: &#x27; + error);
+    }).always(function () { $(&#x27;#consume&#x27;).prop(&#x27;disabled&#x27;, false); });
+  });
+});
+</pre><p><strong>Tự thử:</strong> Chạy qua HTTP/GitHub Pages, bấm tải để nhận năm thành phố; bấm nhiều lần không nhân đôi. Thử nguồn gốc và nguồn lỗi để thấy thông báo rõ.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section><section class="section" id="e10-10"><p class="eyebrow">Lab 10</p><h2>10.10 jqXHR Handling</h2><p>jqXHR là đối tượng do $.get trả về. done chạy khi thành công, fail chạy khi HTTP/JSON/kết nối lỗi, always chạy sau cả hai nhánh để tắt loading và mở lại nút. Trường hợp lỗi JSON có thể HTTP 200 nhưng vẫn vào fail với parsererror.</p><p><strong>Đối chiếu file:</strong> <a href="Lab10/exercise10.html">Lab10/exercise10.html</a> và <code>Lab10/js/exercise10.js</code>.</p><pre class="study-code">$(function () {
+  $(&#x27;.animLoading&#x27;).hide();
+  $(&#x27;#consume&#x27;).on(&#x27;click&#x27;, function () {
+    var url = $(&#x27;#data-source&#x27;).val();
+    $(&#x27;#results&#x27;).empty(); $(&#x27;.animLoading&#x27;).show(); $(&#x27;#consume&#x27;).prop(&#x27;disabled&#x27;, true);
+    $(&#x27;#request-log&#x27;).text(&#x27;GET &#x27; + url); $(&#x27;#request-state&#x27;).text(&#x27;Đang tải…&#x27;);
+    var request = $.get({url: url, dataType: &#x27;json&#x27;, timeout: 7000});
+    request.done(function (data) {
+      if (!Array.isArray(data)) { $(&#x27;#request-state&#x27;).text(&#x27;Dữ liệu không phải danh sách.&#x27;); return; }
+      var ul = $(&#x27;&lt;ul&gt;&#x27;);
+      $.each(data, function (index, value) { $(&#x27;&lt;li&gt;&#x27;).text(value.name).appendTo(ul); });
+      $(&#x27;#results&#x27;).append(ul); $(&#x27;#request-state&#x27;).text(&#x27;Thành công: &#x27; + data.length + &#x27; thành phố.&#x27;);
+      $(&#x27;#request-log&#x27;).append(&#x27;\ndone: đã nhận JSON&#x27;);
+    }).fail(function (xhr, status, error) {
+      $(&#x27;#request-state&#x27;).text(&#x27;Không tải được dữ liệu: &#x27; + status + &#x27;; HTTP &#x27; + xhr.status + &#x27;.&#x27;);
+      $(&#x27;#request-log&#x27;).append(&#x27;\nfail: &#x27; + status + &#x27; / &#x27; + error);
+    }).always(function () {
+      $(&#x27;.animLoading&#x27;).stop(true, true).fadeOut(&#x27;slow&#x27;);
+      $(&#x27;#consume&#x27;).prop(&#x27;disabled&#x27;, false); $(&#x27;#request-log&#x27;).append(&#x27;\nalways: kết thúc yêu cầu&#x27;);
+    });
+  });
+});
+</pre><p><strong>Tự thử:</strong> Thử nguồn JSON đúng, HTTP 404 và JSON sai. Kiểm tra log done/fail rồi always, loading tắt và nút được mở lại sau mỗi lần.</p><p><strong>Tự hỏi:</strong> Nếu thay đổi đầu vào hoặc thứ tự chạy, kết quả nào sẽ đổi? Hãy dự đoán rồi thử trên trang.</p><a href="#top">Lên đầu ↑</a></section></main></body></html>
