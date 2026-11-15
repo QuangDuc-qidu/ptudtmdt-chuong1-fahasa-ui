@@ -1,0 +1,335 @@
+{
+  "origin": "http://127.0.0.1:5563/JavaScript-Labs/",
+  "date": "2026-11-15T08:23:47.536Z",
+  "results": [
+    {
+      "id": "8.1",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-1.png"
+    },
+    {
+      "id": "8.2",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-2.png"
+    },
+    {
+      "id": "8.3",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-3.png"
+    },
+    {
+      "id": "8.4",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-4.png"
+    },
+    {
+      "id": "8.5",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "ReferenceError có chủ đích và bản sửa đều đã thử",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-5.png"
+    },
+    {
+      "id": "8.6",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-6.png"
+    },
+    {
+      "id": "8.7",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-7.png"
+    },
+    {
+      "id": "8.8",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-8.png"
+    },
+    {
+      "id": "8.9",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-9.png"
+    },
+    {
+      "id": "8.10",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-10.png"
+    },
+    {
+      "id": "8.11",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "8-11.png"
+    },
+    {
+      "id": "9.1",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-1.png"
+    },
+    {
+      "id": "9.2",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-2.png"
+    },
+    {
+      "id": "9.3",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-3.png"
+    },
+    {
+      "id": "9.4",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Ẩn/hiện, bấm nhanh và hover hoạt động",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-4.png"
+    },
+    {
+      "id": "9.5",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-5.png"
+    },
+    {
+      "id": "9.6",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Breakpoint thực tế đã dừng, đọc e.target.id = div3",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-6.png"
+    },
+    {
+      "id": "9.7",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-7.png"
+    },
+    {
+      "id": "9.8",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "Rỗng, khoảng trắng, nhập đủ, không lộ mật khẩu trên URL",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "9-8.png"
+    },
+    {
+      "id": "10.1",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-1.png"
+    },
+    {
+      "id": "10.2",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-2.png"
+    },
+    {
+      "id": "10.3",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-3.png"
+    },
+    {
+      "id": "10.5",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Cả 7 phương thức chèn đúng vị trí",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-5.png"
+    },
+    {
+      "id": "10.6",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Đã thử 6 nút fade/slide",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-6.png"
+    },
+    {
+      "id": "10.7",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Preview ảnh lớn, di chuyển, xóa và focus bàn phím",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-7.png"
+    },
+    {
+      "id": "10.8",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-8.png"
+    },
+    {
+      "id": "10.9",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-9.png"
+    },
+    {
+      "id": "10.10",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "GET thành công, 404, parsererror, always dọn loading và thử lại",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-10.png"
+    },
+    {
+      "id": "10.4",
+      "status": "PASS",
+      "checks": [
+        "Trang và ảnh tải được",
+        "jQuery cục bộ chạy khi CDN bị chặn",
+        "Không tràn ngang ở 1366px",
+        "Xem mã nguồn có số dòng"
+      ],
+      "screenshot": "10-4.png"
+    },
+    {
+      "id": "8.1-nojs",
+      "status": "PASS",
+      "checks": [
+        "JavaScript thực sự bị tắt trong browser context"
+      ]
+    },
+    {
+      "id": "8.4-nojs",
+      "status": "PASS",
+      "checks": [
+        "JavaScript thực sự bị tắt trong browser context"
+      ]
+    }
+  ],
+  "unexpected": [],
+  "linkCount": 88,
+  "responsiveWidths": [
+    1366,
+    768,
+    390
+  ]
+}

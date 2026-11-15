@@ -1,0 +1,7 @@
+// document.write chỉ được gọi khi HTML đang được phân tích, theo bài Lab 08.
+document.write('this text was written from JS');
+var count = 1;
+document.write(' Count = ' + count);
+count++;
+var output = '<br>Count = ' + count;
+document.write(output);
