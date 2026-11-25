@@ -3,3 +3,14 @@ body { padding-block: 20px; }
 .destination img { width: 100%; height: 140px; object-fit: cover; }
 .destination h3 { margin: 0.65em 0; font-size: 1.15em; }
 .destination .btn { margin-bottom: 0.35em; }
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    display: block;
+    float: none;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
+}
