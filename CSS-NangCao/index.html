@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 07 · CSS nâng cao | Nguyễn Quang Đức</title>
+  <meta name="description" content="Portfolio Lab 07 của Nguyễn Quang Đức, gồm 19 bài tập về bố cục và hiệu ứng CSS.">
+  <link rel="stylesheet" href="assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="site-name" href="./">CSS nâng cao</a>
+      <nav aria-label="Điều hướng">
+        <a href="#bai-tap">Bài thực hành</a>
+        <a href="#tong-ket">Tổng kết</a>
+        <a href="https://github.com/QuangDuc-qidu">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="title">
+      <div>
+        <p class="course">Phát triển ứng dụng TMĐT</p>
+        <h1 id="title">Lab 07<br>CSS nâng cao</h1>
+        <p class="lead">Thực hành bố cục web từ document flow, định vị và float đến giao diện responsive, hiệu ứng CSS và lưới Bootstrap.</p>
+        <a class="button" href="#bai-tap">Mở danh sách bài</a>
+      </div>
+      <div class="profile">
+        <img src="assets/avatar.png" alt="Ảnh đại diện Nguyễn Quang Đức" width="112" height="112">
+        <div>
+          <h2>Nguyễn Quang Đức</h2>
+          <p>MSSV 31241026319</p>
+          <p>Lớp 26C1INF50902702 · ST5</p>
+        </div>
+      </div>
+    </section>
+    <section class="exercise-section" id="bai-tap" aria-labelledby="exercise-title">
+      <div class="section-head">
+        <h2 id="exercise-title">Bài thực hành</h2>
+        <p>Bài 7.12 và 7.13 dùng chung một trang để so sánh cấu hình desktop và mobile.</p>
+      </div>
+    <section class="exercise-group">
+      <h3>Luồng hiển thị và định vị</h3>
+      <ul>
+        <li>
+          <a href="Lab07/lab07-exercise01.html">
+            <span class="number">7.1</span>
+            <span>
+              <strong>Document Flow</strong>
+              <small>Đổi display của span, li và ảnh để thay đổi cách các phần tử chiếm dòng.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise02.html">
+            <span class="number">7.2</span>
+            <span>
+              <strong>Relative Positioning</strong>
+              <small>Dời figure khỏi vị trí ban đầu bằng top và left. Khoảng trống cũ vẫn được giữ trong luồng.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise03.html">
+            <span class="number">7.3</span>
+            <span>
+              <strong>Absolute Positioning</strong>
+              <small>Đặt figure tuyệt đối và lấy figure đã định vị làm mốc cho figcaption.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise04.html">
+            <span class="number">7.4</span>
+            <span>
+              <strong>Stacking Using Z-Index</strong>
+              <small>So sánh thứ tự xếp lớp của figure và figcaption khi thay đổi z-index.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="exercise-group">
+      <h3>Float, clear và lớp phủ</h3>
+      <ul>
+        <li>
+          <a href="Lab07/lab07-exercise05.html">
+            <span class="number">7.5</span>
+            <span>
+              <strong>Floating Elements</strong>
+              <small>Thử float trái và phải cho figure có chiều rộng cố định để văn bản bao quanh.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise06.html">
+            <span class="number">7.6</span>
+            <span>
+              <strong>Floating in a Container</strong>
+              <small>Cho figure trôi trong article để quan sát khoảng cách tới mép khung.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise07.html">
+            <span class="number">7.7</span>
+            <span>
+              <strong>Floating Multiple Items</strong>
+              <small>Cho nhiều figure trôi cùng hướng để chúng tự xuống hàng khi thiếu chỗ.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise08.html">
+            <span class="number">7.8</span>
+            <span>
+              <strong>Floating and Clearing</strong>
+              <small>Dùng clear: left cho figure British Museum và đoạn văn sau cụm ảnh.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise09.html">
+            <span class="number">7.9</span>
+            <span>
+              <strong>Using Positioning</strong>
+              <small>Đặt caption và nhãn New tuyệt đối bên trong figure có position: relative.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="exercise-group">
+      <h3>Bố cục và thiết bị di động</h3>
+      <ul>
+        <li>
+          <a href="Lab07/lab07-exercise10.html">
+            <span class="number">7.10</span>
+            <span>
+              <strong>Two-Column Layout</strong>
+              <small>Đặt nav bằng float và chừa lề trái cho nội dung để tạo hai cột.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise11.html">
+            <span class="number">7.11</span>
+            <span>
+              <strong>Three-Column Layout</strong>
+              <small>Định vị nav và aside trong container tương đối, dùng hai lề để giữ nội dung ở giữa.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise12.html">
+            <span class="number">7.12</span>
+            <span>
+              <strong>Media Queries</strong>
+              <small>Tách stylesheet desktop và mobile ở ngưỡng 480/481 px. Màn hình hẹp dùng một cột.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise12.html">
+            <span class="number">7.13</span>
+            <span>
+              <strong>Setting the Viewport</strong>
+              <small>Dùng tiếp trang 7.12, thêm viewport và đổi điều hướng từ danh sách sang select trên mobile.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="exercise-group">
+      <h3>Hiệu ứng CSS</h3>
+      <ul>
+        <li>
+          <a href="Lab07/lab07-exercise14.html">
+            <span class="number">7.14</span>
+            <span>
+              <strong>Transforms</strong>
+              <small>So sánh rotate, skew, translate và scale trên figure cùng ảnh bên trong.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise15.html">
+            <span class="number">7.15</span>
+            <span>
+              <strong>Transitions</strong>
+              <small>Chuyển màu nền nút trong một giây với hàm thời gian ease-out.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise16.html">
+            <span class="number">7.16</span>
+            <span>
+              <strong>More Transitions</strong>
+              <small>Chuyển đồng thời màu nền, màu chữ, bóng và tỷ lệ của thẻ, có hiệu ứng chiều quay về.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise17.html">
+            <span class="number">7.17</span>
+            <span>
+              <strong>Filters</strong>
+              <small>Áp dụng các CSS filter riêng lẻ và kết hợp để thay đổi cùng một ảnh mẫu.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="Lab07/lab07-exercise18.html">
+            <span class="number">7.18</span>
+            <span>
+              <strong>Animations</strong>
+              <small>Dùng hai bộ @keyframes để thay màu, vị trí, độ mờ và biến đổi hình khối.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="exercise-group">
+      <h3>Bootstrap</h3>
+      <ul>
+        <li>
+          <a href="Lab07/lab07-exercise19.html">
+            <span class="number">7.19</span>
+            <span>
+              <strong>Using Bootstrap</strong>
+              <small>Dùng lưới 12 cột cùng navbar, panel, list group, jumbotron, nút và hàng lồng.</small>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    </section>
+    <section class="reflection" id="tong-ket" aria-labelledby="reflection-title">
+      <h2 id="reflection-title">Tổng kết</h2>
+      <p>Lab 07 giúp làm rõ cách trình duyệt bố trí phần tử trước khi CSS can thiệp. Ở bài ba cột, điểm dễ nhầm nhất là mốc của position: absolute. Khi container có position: relative, hai cột phụ bám vào đúng khung và nội dung giữa có lề riêng. Nhóm bài responsive hữu ích cho trang bán hàng vì cùng một nội dung có thể hiển thị nhiều cột trên máy tính và chuyển sang một cột trên điện thoại. Transition giúp nút và thẻ sản phẩm phản hồi khi rê chuột. Bootstrap hỗ trợ dựng nhanh khung danh mục, còn CSS riêng giúp giữ màu sắc và cách trình bày của từng cửa hàng.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell">Nguyễn Quang Đức · <a href="https://github.com/QuangDuc-qidu/ptudtmdt-chuong1-fahasa-ui/tree/main/CSS-NangCao">Mã nguồn Lab 07</a></div>
+  </footer>
+</body>
+</html>

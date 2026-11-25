@@ -1,0 +1,20 @@
+figure {
+    margin: 2em;
+    padding: 1em;
+    background: #FFCC80;
+    width: 200px;
+
+}
+
+figure {
+  transform: rotate(15deg);
+}
+
+figure img {
+  transform: rotate(45deg) scale(0.5);
+}
+
+body:has(#skew:checked) figure { transform: skew(-20deg); }
+body:has(#skew:checked) figure img { transform: none; }
+body:has(#translate:checked) figure { transform: skew(-20deg); }
+body:has(#translate:checked) figure img { transform: translate(100px, -30px); }

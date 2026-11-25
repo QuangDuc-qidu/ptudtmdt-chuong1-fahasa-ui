@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 07 · 7.19 Using Bootstrap</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lab07-exercise19.css">
+</head>
+<body class="container">
+  <nav class="navbar navbar-default" aria-label="Primary">
+    <a class="navbar-brand" href="../index.html">Share Your Travels</a>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="../index.html">Home</a></li>
+      <li><a href="#destinations">Browse</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#about">About us</a></li>
+    </ul>
+  </nav>
+  <main class="row">
+    <aside class="col-md-3" id="destinations">
+      <section class="panel panel-default">
+        <div class="panel-heading"><h2 class="panel-title">Destinations</h2></div>
+        <div class="panel-body"><ul class="list-group">
+          <li class="list-group-item">Austria</li><li class="list-group-item">Canada</li>
+          <li class="list-group-item">France</li><li class="list-group-item">Italy</li>
+          <li class="list-group-item">Spain</li>
+        </ul></div>
+      </section>
+    </aside>
+    <section class="col-md-9">
+      <div class="jumbotron" id="about">
+        <h1>Travel photograph gallery</h1>
+        <p>A Bootstrap layout with a sidebar and a twelve-column grid of photographs.</p>
+      </div>
+      <h2 id="photos">Nested columns</h2>
+      <div class="row">
+        <article class="col-xs-6 col-md-3 destination">
+          <img class="img-responsive" src="images/464.jpg" alt="London">
+          <h3>London</h3>
+          <a class="btn btn-primary btn-sm" href="images/464.jpg"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> View</a>
+          <button type="button" class="btn btn-success btn-sm" disabled><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</button>
+        </article>
+        <article class="col-xs-6 col-md-3 destination">
+          <img class="img-responsive" src="images/9498358806.jpg" alt="Florence">
+          <h3>Florence</h3>
+          <a class="btn btn-primary btn-sm" href="images/9498358806.jpg"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> View</a>
+          <button type="button" class="btn btn-success btn-sm" disabled><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</button>
+        </article>
+        <article class="col-xs-6 col-md-3 destination">
+          <img class="img-responsive" src="images/9504449928.jpg" alt="Santo Spirito">
+          <h3>Santo Spirito</h3>
+          <a class="btn btn-primary btn-sm" href="images/9504449928.jpg"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> View</a>
+          <button type="button" class="btn btn-success btn-sm" disabled><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</button>
+        </article>
+        <article class="col-xs-6 col-md-3 destination">
+          <img class="img-responsive" src="images/9494472443.jpg" alt="Venice">
+          <h3>Venice</h3>
+          <a class="btn btn-primary btn-sm" href="images/9494472443.jpg"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> View</a>
+          <button type="button" class="btn btn-success btn-sm" disabled><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</button>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
